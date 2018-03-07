@@ -8,7 +8,7 @@ import router from "./router";
 import iView from "iview"; //iview模块
 
 //styles
-import "./assets/styles/reset.css"; //初始化默认样式
+import "./assets/public/reset.css"; //初始化默认样式
 import "iview/dist/styles/iview.css"; //iview样式
 
 Vue.config.productionTip = false;
