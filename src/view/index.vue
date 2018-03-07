@@ -1,9 +1,13 @@
 <template>
     <div class="index">
-        <div class="head">
-            <div class="head-logo">
-                <img src="../assets/logo.png" alt="">
-            </div>
-        </div>
+        <vheader/>
     </div>
 </template>
+<script>
+import Vheader from "../components/header.vue";
+export default {
+    components: {
+        Vheader
+    }
+};
+</script>
