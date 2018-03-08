@@ -35,79 +35,149 @@
     }
   }
   //   全部商品分类
-  .banner {
-    .width-1260-center;
-    padding-top: 34px;
-    .banner-classify {
-      width: 240px;
-      height: 40px;
-      line-height: 40px;
-      background-color: #49cbcd;
-      display: inline-block;
-      vertical-align: top;
-      .ios-arrow-down {
-        font-size: 18px;
-        color: white;
-        padding-left: 50px;
-        line-height: 40px;
-      }
-      p {
-        font-size: 16px;
-        color: #ffffff;
-        line-height: 40px;
-        padding-left: 32px;
-      }
-    }
-    .banner-menu {
-      overflow: hidden;
-      margin-left: 36px;
-      display: inline-block;
-      ul {
-        li {
-          float: left;
-          font-size: 16px;
+  // .banner {
+  //   .width-1260-center;
+  //   // height:40px;
+  //   padding-top: 34px;
+  //   .banner-classify {
+  //     width: 240px;
+  //     height: 40px;
+  //     line-height: 40px;
+  //     background-color: #49cbcd;
+  //     display: inline-block;
+  //     vertical-align: top;
+  //     .ios-arrow-down {
+  //       font-size: 18px;
+  //       color: white;
+  //       padding-left: 50px;
+  //       line-height: 40px;
+  //     }
+  //     p {
+  //       font-size: 16px;
+  //       color: #ffffff;
+  //       line-height: 40px;
+  //       padding-left: 32px;
+  //     }
+  //   }
+  //   .banner-menu {
+  //     overflow: hidden;
+  //     margin-left: 36px;
+  //     display: inline-block;
+  //     ul {
+  //       li {
+  //         float: left;
+  //         font-size: 16px;
+  //         color: #364049;
+  //         padding-left: 36px;
+  //         line-height: 40px;
+  //       }
+  //     }
+  //   }
+  // }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //   家居商品
+  .good-box {
+    background-color: #f5f5f5;
+    .goods {
+      .width-1260-center;
+      padding-top: 56px;
+      .goods-title {
+        .goods-headline {
+          font-size: 24px;
           color: #364049;
-          padding-left: 36px;
-          line-height: 40px;
         }
       }
-    }
-  }
-  //   家居商品
-  .goods {
-    .width-1260-center;
-    margin-top: 56px;
-    background-color: #f5f5f5;
-    .goods-title {
-      .goods-headline {
-        font-size: 24px;
-        color: #364049;
+      .goods-more {
+        font-size: 16px;
+        color: #788492;
+        float: right;
       }
-    }
-    .goods-more {
-      font-size: 16px;
-      color: #788492;
-      float: right;
-    }
-  }
-  .goods-list {
-    margin-top: 20px;
-    //  position: relative;
-    .good-picture {
-      p {
-        position: absolute;
-        left: 0;
-        top: 0;
-        // margin-top:184px;
-        font-size: 30px;
-        color: #364049;
-      }
-      span {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: 14px;
-        color: #485460;
+      .goods-list {
+        margin-top: 20px;
+        overflow: hidden;
+
+        .good-list-left {
+          float: left;
+          height: 496px;
+          width: 248px;
+          position: relative;
+          img {
+            height: 496px;
+            width: 248px;
+          }
+          .goods-list-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            padding-top: 184px;
+            span {
+              font-size: 30px;
+              color: #364049;
+            }
+            p {
+              font-size: 14px;
+              color: #485460;
+            }
+          }
+        }
+        .good-list-right {
+          float: right;
+          width: 992px;
+          height: 496px;
+          position: relative;
+          .good-picture {
+            float: left;
+            height: 248px;
+            width: 248px;
+            position: relative;
+            overflow: hidden;
+            img{
+              width: 100%;
+            }
+            .good-mask {
+              position: absolute;
+              left: 0;
+              bottom: -44px;
+              width: 248px;
+              height: 44px;
+              transition: 0.2s linear all;
+              background-color: #49cbcd;
+              text-align: center;
+              line-height: 44px;
+              p{
+                font-size: 18px;
+                color: #FFFFFF;
+              }
+            }
+          }
+          .good-picture:hover{
+            .good-mask{
+              bottom: 0;
+            }
+          }
+        }
       }
     }
   }

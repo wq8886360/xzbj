@@ -10,7 +10,7 @@
             </div>
         </div>
         <!-- 全部商品分类 -->
-        <div class="banner">
+        <!-- <div class="banner">
             <div class="banner-classify">
                 <p>全部商品分类
                     <Icon class="ios-arrow-down" type="ios-arrow-down"></Icon>
@@ -26,7 +26,26 @@
                     <li>户型</li>
                 </ul>
             </div>
+        </div> -->
+
+        <div class="banner">
+            <div class="banner-classify">
+                
+            </div>
+
         </div>
+
+        
+
+        
+
+
+
+
+
+
+
+
         <!-- 轮播图 -->
         <template>
             <Carousel autoplay arrow="never">
@@ -48,31 +67,62 @@
             </Carousel>
         </template>
         <!-- 家具商品 -->
-        
-        <div class="goods">
-            <div class="goods-title">
-                <span class="goods-headline">家居商品</span>
-                <div class="goods-more">
-                    <span class="goods-added">更多</span>
-                    <Icon type="ios-arrow-right"></Icon>
-                    <Icon type="ios-arrow-right"></Icon>
+        <div class="good-box">
+            <div class="goods">
+                <div class="goods-title">
+                    <span class="goods-headline">家居商品</span>
+                    <div class="goods-more">
+                        <span class="goods-added">更多</span>
+                        <Icon type="ios-arrow-right"></Icon>
+                        <Icon type="ios-arrow-right"></Icon>
+                    </div>
                 </div>
-            </div>
-
-            <div class="goods-list">
-                <ul>
-                    <li>
-                        <div class="good-picture">
-                            <img src="../assets/img/houseHold.jpg">
-                            <div class="good-genre">
-                                <p>家居</p>
-                                <span>高品质生活的首选</span>
+                <div class="goods-list">
+                    <div class="good-list-left">
+                        <img src="../assets/img/houseHold.jpg" alt="">
+                        <div class="goods-list-title">
+                            <span>家居</span>
+                            <p>高品质生活的首选</p>
+                        </div>
+                    </div>
+                    <div class="good-list-right">
+                        <div class="good-picture" v-for="item in 8">
+                            <img src="../assets/img/bathroom.jpg" alt="">
+                            <div class="good-mask">
+                                <p>家居·床</p>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-
+            <!-- 建材商品 -->
+            <div class="goods">
+                <div class="goods-title">
+                    <span class="goods-headline">建材商品</span>
+                    <div class="goods-more">
+                        <span class="goods-added">更多</span>
+                        <Icon type="ios-arrow-right"></Icon>
+                        <Icon type="ios-arrow-right"></Icon>
+                    </div>
+                </div>
+                <div class="goods-list">
+                    <div class="good-list-left">
+                        <img src="../assets/img/houseHold.jpg" alt="">
+                        <div class="goods-list-title">
+                            <span>建材</span>
+                            <p>绿色、健康、环保</p>
+                        </div>
+                    </div>
+                    <div class="good-list-right">
+                        <div class="good-picture" v-for="item in 8">
+                            <img src="../assets/img/bathroom.jpg" alt="">
+                            <div class="good-mask">
+                                <p>绿色、健康、环保</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
