@@ -15,7 +15,12 @@
                 <div class="download"><a href="">下载小猪扮家客户端</a></div>
             </div>
             <div class="content-right">
-                
+                <div class="not-login">
+                    <span><router-link to="/login">登录</router-link></span>
+                    <i class="line">|</i>
+                    <span><router-link to="/regist">注册</router-link></span>
+                </div>
+                <div class="is-login"></div>
             </div>
         </div>
     </div>
@@ -101,6 +106,20 @@ export default {
                 a {
                     color: #fff;
                 }
+            }
+        }
+        .content-right {
+            float: right;
+            height: 100%;
+            line-height: 50px;
+            .line {
+                margin: 0 8px;
+            }
+            a {
+                color: #8898ab;
+            }
+            a:hover {
+                color: #fff;
             }
         }
     }

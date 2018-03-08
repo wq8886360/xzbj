@@ -1,0 +1,64 @@
+@import "../public/public.less";
+@import "../public/theme.less";
+.login {
+    .logo {
+        .width-1260-center;
+        padding: 30px 0 72px;
+        img {
+            width: 92px;
+            height: 92px;
+        }
+    }
+    .login-bg {
+        height: 554px;
+        min-width: 1260px;
+        background: #49cbcd;
+        position: relative;
+        .login-form {
+            padding: 50px 50px 0;
+            width: 400px;
+            box-sizing: border-box;
+            height: 384px;
+            background: #fff;
+            position: absolute;
+            right: 330px;
+            top: 86px;
+            input {
+                .zl-input;
+            }
+            .user {
+                margin-bottom: 20px;
+            }
+            .pwd {
+                margin-bottom: 12px;
+            }
+            .error {
+                color: #fc6532;
+                i {
+                    font-size: 15px;
+                    vertical-align: middle;
+                }
+            }
+            .login-time {
+                margin: 14px 0;
+                .ivu-checkbox-checked .ivu-checkbox-inner {
+                    border-color: @activeColor;
+                    background: @activeColor;
+                }
+            }
+            .submit {
+                .zl-btn;
+                height: 42px;
+                font-size: 16px;
+                color: #fff;
+            }
+            .regist-forgot {
+                margin-top: 10px;
+                overflow: hidden;
+                .forgot {
+                    float: right;
+                }
+            }
+        }
+    }
+}

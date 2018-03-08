@@ -54,6 +54,7 @@ ol {
     list-style: none;
 }
 a {
+    color: inherit !important;
     text-decoration: none !important;
 }
 a:link {
