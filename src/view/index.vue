@@ -10,27 +10,28 @@
             </div>
         </div>
         <!-- 全部商品分类 -->
-        <!-- <div class="banner">
-            <div class="banner-classify">
-                <p>全部商品分类
-                    <Icon class="ios-arrow-down" type="ios-arrow-down"></Icon>
-                </p>
-            </div>
-            <div class="banner-menu">
-                <ul>
-                    <li>首页</li>
-                    <li>建材商品</li>
-                    <li>家居商品</li>
-                    <li>品牌活动</li>
-                    <li>整包方案</li>
-                    <li>户型</li>
-                </ul>
-            </div>
-        </div> -->
-
         <div class="banner">
             <div class="banner-classify">
-                
+                <p>
+                   全部商品分类 
+                   <Icon class="ios-arrow-down" type="ios-arrow-down"></Icon>
+                </p>
+                <div class="banner-dropdown">
+                    <ul>
+                        <li>装修主材 
+                            <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                        </li>
+                         <li>家具软装
+                            <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                        </li>
+                         <li>灯饰照明
+                            <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                        </li>
+                         <li>家用厨房电器
+                            <Icon class="ios-right" type="ios-arrow-right"></Icon>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
