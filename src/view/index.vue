@@ -48,6 +48,7 @@
             </Carousel>
         </template>
         <!-- 家具商品 -->
+        
         <div class="goods">
             <div class="goods-title">
                 <span class="goods-headline">家居商品</span>
@@ -67,7 +68,6 @@
                                 <p>家居</p>
                                 <span>高品质生活的首选</span>
                             </div>
-
                         </div>
                     </li>
                 </ul>
