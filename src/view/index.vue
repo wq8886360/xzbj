@@ -13,33 +13,32 @@
         <div class="banner">
             <div class="banner-classify">
                 <p>
-                   全部商品分类 
-                   <Icon class="ios-arrow-down" type="ios-arrow-down"></Icon>
+                    全部商品分类
+                    <Icon class="ios-arrow-down" type="ios-arrow-down"></Icon>
                 </p>
                 <div class="banner-dropdown">
                     <ul>
-                        <li>装修主材 
+                        <li>装修主材
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
                             <div class="menu-list">
                                 <div class="item" v-for="item in 8">
-                                    <img src="../assets/img/houseHold.jpg" alt="">
-                                    地板
+                                    <img src="../assets/img/houseHold.jpg" alt=""> 地板
                                 </div>
                             </div>
                         </li>
-                         <li>家具软装
+                        <li>家具软装
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
                             <div class="menu-list">
 
                             </div>
                         </li>
-                         <li>灯饰照明
+                        <li>灯饰照明
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
                             <div class="menu-list">
 
                             </div>
                         </li>
-                         <li>家用厨房电器
+                        <li>家用厨房电器
                             <Icon class="ios-right" type="ios-arrow-right"></Icon>
                             <div class="menu-list">
 
@@ -48,38 +47,40 @@
                     </ul>
                 </div>
             </div>
+            <div class="menu">
+                <ul>
+                    <li>首页</li>
+                    <li>建材商品</li>
+                    <li>家居商品</li>
+                    <li>品牌活动</li>
+                    <li>整包方案</li>
+                    <li>户型</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 轮播图 -->
+        <div class="ivue-banner">
+            <Carousel  arrow="never">
+                <Carousel-item>
+                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                </Carousel-item>
+                <Carousel-item>
+                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                </Carousel-item>
+                <Carousel-item>
+                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                </Carousel-item>
+                <Carousel-item>
+                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                </Carousel-item>
+                <Carousel-item>
+                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                </Carousel-item>
+            </Carousel>
 
         </div>
 
-        
-
-        
-
-
-
-
-
-
-
-
-        <!-- 轮播图 -->
-        <Carousel autoplay arrow="never">
-            <Carousel-item>
-                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-            </Carousel-item>
-            <Carousel-item>
-                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-            </Carousel-item>
-            <Carousel-item>
-                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-            </Carousel-item>
-            <Carousel-item>
-                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-            </Carousel-item>
-            <Carousel-item>
-                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-            </Carousel-item>
-        </Carousel>
         <!-- 家具商品 -->
         <div class="good-box">
             <div class="goods">
