@@ -29,21 +29,21 @@
                         </li>
                          <li>家具软装
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
-                            <!-- <div class="menu-list">
+                            <div class="menu-list">
 
-                            </div> -->
+                            </div>
                         </li>
                          <li>灯饰照明
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
-                            <!-- <div class="menu-list">
+                            <div class="menu-list">
 
-                            </div> -->
+                            </div>
                         </li>
                          <li>家用厨房电器
                             <Icon class="ios-right" type="ios-arrow-right"></Icon>
-                            <!-- <div class="menu-list">
+                            <div class="menu-list">
 
-                            </div> -->
+                            </div>
                         </li>
                     </ul>
                 </div>
