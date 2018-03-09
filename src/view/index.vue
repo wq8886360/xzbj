@@ -20,15 +20,30 @@
                     <ul>
                         <li>装修主材 
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                            <div class="menu-list">
+                                <div class="item" v-for="item in 8">
+                                    <img src="../assets/img/houseHold.jpg" alt="">
+                                    地板
+                                </div>
+                            </div>
                         </li>
                          <li>家具软装
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                            <!-- <div class="menu-list">
+
+                            </div> -->
                         </li>
                          <li>灯饰照明
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                            <!-- <div class="menu-list">
+
+                            </div> -->
                         </li>
                          <li>家用厨房电器
                             <Icon class="ios-right" type="ios-arrow-right"></Icon>
+                            <!-- <div class="menu-list">
+
+                            </div> -->
                         </li>
                     </ul>
                 </div>
@@ -48,25 +63,23 @@
 
 
         <!-- 轮播图 -->
-        <template>
-            <Carousel autoplay arrow="never">
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-            </Carousel>
-        </template>
+        <Carousel autoplay arrow="never">
+            <Carousel-item>
+                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+            </Carousel-item>
+            <Carousel-item>
+                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+            </Carousel-item>
+            <Carousel-item>
+                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+            </Carousel-item>
+            <Carousel-item>
+                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+            </Carousel-item>
+            <Carousel-item>
+                <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+            </Carousel-item>
+        </Carousel>
         <!-- 家具商品 -->
         <div class="good-box">
             <div class="goods">
@@ -87,7 +100,7 @@
                         </div>
                     </div>
                     <div class="good-list-right">
-                        <div class="good-picture" v-for="item in 8">
+                        <div class="good-picture" v-for="(item,index) in 8" :key="index">
                             <img src="../assets/img/bathroom.jpg" alt="">
                             <div class="good-mask">
                                 <p>家居·床</p>
@@ -115,7 +128,7 @@
                         </div>
                     </div>
                     <div class="good-list-right">
-                        <div class="good-picture" v-for="item in 8">
+                        <div class="good-picture" v-for="(item,index) in 8" :key="index">
                             <img src="../assets/img/bathroom.jpg" alt="">
                             <div class="good-mask">
                                 <p>绿色、健康、环保</p>
@@ -136,11 +149,9 @@ export default {
         CarouselItem
     },
     data() {
-        return {
-
-        }
+        return {};
     }
-}
+};
 </script>
 <style lang="less">
 @import "../assets/styles/index.less";

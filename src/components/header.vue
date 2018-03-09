@@ -76,6 +76,7 @@ export default {
                     background: #fff;
                     display: none;
                     position: absolute;
+                    z-index: 10;
                     left: 0;
                     top: 50px;
                     box-shadow: 0 0 2px 0;
