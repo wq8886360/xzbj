@@ -1,182 +1,223 @@
 @import "../public/public.less";
+@import "../public/theme.less";
 .index {
-  .head {
-    .width-1260-center;
-    position: relative;
-    overflow: hidden;
-    .head-logo {
-      width: 92px;
-      height: 92px;
-      float: left;
-      margin-top: 34.1px;
+    .head {
+        .width-1260-center;
+        position: relative;
+        overflow: hidden;
+        .head-logo {
+            width: 92px;
+            height: 92px;
+            float: left;
+            margin-top: 34.1px;
+        }
+        .head-search {
+            width: 400px;
+            height: 36px;
+            border: 1px solid #788492;
+            border-radius: 100px;
+            float: right;
+            margin-top: 58px;
+            input {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+                border: none;
+                margin: 0 20px;
+                outline: none;
+                background: transparent;
+            }
+            img {
+                position: absolute;
+                left: 1220px;
+                top: 67px;
+                width: 16px;
+                height: 16px;
+            }
+        }
     }
-    .head-search {
-      width: 400px;
-      height: 36px;
-      border: 1px solid #788492;
-      border-radius: 100px;
-      float: right;
-      margin-top: 58px;
-      input {
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        border: none;
-        margin: 0 20px;
-        outline: none;
-        background: transparent;
-      }
-      img {
-        position: absolute;
-        left: 1220px;
-        top: 67px;
-        width: 16px;
-        height: 16px;
-      }
-    }
-  }
-  //   全部商品分类
-  .banner {
-    .width-1260-center;
-    margin-top: 43.3px;
-    .banner-classify {
-      width: 240px;
-      height: 40px;
-      background-color: #49cbcd;
-      // text-align: center;
-      position: relative;
-      .ios-arrow-down {
-        font-size: 18px;
-        color: white;
-        padding-left: 50px;
-        line-height: 40px;
-      }
-      p {
-        font-size: 16px;
-        color: #ffffff;
-        margin-left: 32px;
-      }
-      .banner-dropdown {
-        width: 240px;
-        height: 600px;
-        // display: none;
-        background-color: #485460;
-        opacity: 0.9;
-        z-index: 99;
-        position: absolute;
-        left: 0;
-        top: 40px;
-        ul {
-          li {
-            font-size: 14px;
-            color: #ffffff;
+    //   全部商品分类
+    .banner {
+        .width-1260-center;
+        margin-top: 43.3px;
+        .banner-classify {
             width: 240px;
             height: 40px;
-            // background-color: #49cbcd;
-            padding-left: 32px;
-            margin-top: 24px;
-            line-height: 40px;
-            .ios-arrow-right {
-              padding-left: 92px;
-              font-size: 18px;
-            }
-            .ios-right {
-              padding-left: 63px;
-              font-size: 18px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  //   家居商品
-  .good-box {
-    background-color: #f5f5f5;
-
-    .goods {
-      .width-1260-center;
-      margin-bottom: 56px;
-      padding-bottom: 56px;
-      .goods-title {
-        .goods-headline {
-          font-size: 24px;
-          color: #364049;
-        }
-      }
-      .goods-more {
-        font-size: 16px;
-        color: #788492;
-        float: right;
-      }
-      .goods-list {
-        margin-top: 20px;
-        overflow: hidden;
-
-        .good-list-left {
-          float: left;
-          height: 496px;
-          width: 248px;
-          position: relative;
-          img {
-            height: 496px;
-            width: 248px;
-          }
-          .goods-list-title {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            padding-top: 184px;
-            span {
-              font-size: 30px;
-              color: #364049;
+            background-color: #49cbcd;
+            // text-align: center;
+            position: relative;
+            .ios-arrow-down {
+                font-size: 18px;
+                color: white;
+                padding-left: 50px;
+                line-height: 40px;
             }
             p {
-              font-size: 14px;
-              color: #485460;
-            }
-          }
-        }
-        .good-list-right {
-          float: right;
-          width: 992px;
-          height: 496px;
-          position: relative;
-          .good-picture {
-            float: left;
-            height: 248px;
-            width: 248px;
-            position: relative;
-            overflow: hidden;
-            img {
-              width: 100%;
-            }
-            .good-mask {
-              position: absolute;
-              left: 0;
-              bottom: -44px;
-              width: 248px;
-              height: 44px;
-              transition: 0.2s linear all;
-              background-color: #49cbcd;
-              text-align: center;
-              line-height: 44px;
-              p {
-                font-size: 18px;
+                font-size: 16px;
                 color: #ffffff;
-              }
+                margin-left: 32px;
             }
-          }
-          .good-picture:hover {
-            .good-mask {
-              bottom: 0;
+            .banner-dropdown {
+                width: 240px;
+                height: 601px;
+                background-color: #485460;
+                z-index: 99;
+                position: absolute;
+                left: 0;
+                top: 39px;
+                display: none;
+                ul {
+                    padding-top: 24px;
+                    position: relative;
+                    li {
+                        font-size: 14px;
+                        color: #ffffff;
+                        width: 240px;
+                        height: 40px;
+                        padding-left: 32px;
+                        line-height: 40px;
+                        .ios-arrow-right {
+                            padding-left: 92px;
+                            font-size: 18px;
+                        }
+                        .ios-right {
+                            padding-left: 63px;
+                            font-size: 18px;
+                        }
+                        .menu-list {
+                            width: 1020px;
+                            height: 601px;
+                            box-sizing: border-box;
+                            padding: 42px 0 0 40px;
+                            background: #fff;
+                            position: absolute;
+                            border: 1px solid #999;
+                            border-left: none;
+                            display: none;
+                            left: 240px;
+                            top: 0;
+                            div.item {
+                                float: left;
+                                height: 72px;
+                                line-height: 72px;
+                                color: #364049;
+                                margin-right: 76px;
+                                margin-bottom: 40px;
+                                img {
+                                    width: 72px;
+                                    height: 72px;
+                                    margin-right: 14px;
+                                    vertical-align: middle;
+                                }
+                            }
+                            div.item:hover {
+                                color: @activeColor;
+                            }
+                        }
+                    }
+                    li:hover {
+                        background: @activeColor;
+                        .menu-list {
+                            display: block;
+                        }
+                    }
+                }
             }
-          }
         }
-      }
+        .banner-classify:hover {
+            .banner-dropdown {
+                display: block;
+            }
+        }
     }
-  }
+
+    //   家居商品
+    .good-box {
+        background-color: #f5f5f5;
+
+        .goods {
+            .width-1260-center;
+            // margin-bottom:56px;
+            padding-top: 56px;
+            .goods-title {
+                .goods-headline {
+                    font-size: 24px;
+                    color: #364049;
+                }
+            }
+            .goods-more {
+                font-size: 16px;
+                color: #788492;
+                float: right;
+            }
+            .goods-list {
+                margin-top: 20px;
+                overflow: hidden;
+
+                .good-list-left {
+                    float: left;
+                    height: 496px;
+                    width: 248px;
+                    position: relative;
+                    img {
+                        height: 496px;
+                        width: 248px;
+                    }
+                    .goods-list-title {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        padding-top: 184px;
+                        span {
+                            font-size: 30px;
+                            color: #364049;
+                        }
+                        p {
+                            font-size: 14px;
+                            color: #485460;
+                        }
+                    }
+                }
+                .good-list-right {
+                    float: right;
+                    width: 992px;
+                    height: 496px;
+                    position: relative;
+                    .good-picture {
+                        float: left;
+                        height: 248px;
+                        width: 248px;
+                        position: relative;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                        }
+                        .good-mask {
+                            position: absolute;
+                            left: 0;
+                            bottom: -44px;
+                            width: 248px;
+                            height: 44px;
+                            transition: 0.2s linear all;
+                            background-color: #49cbcd;
+                            text-align: center;
+                            line-height: 44px;
+                            p {
+                                font-size: 18px;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    .good-picture:hover {
+                        .good-mask {
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
