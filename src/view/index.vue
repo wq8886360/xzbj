@@ -61,7 +61,7 @@
 
         <!-- 轮播图 -->
         <div class="ivue-banner">
-            <Carousel  arrow="never">
+            <Carousel autoplay arrow="never">
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
                 </Carousel-item>
@@ -88,8 +88,8 @@
                     <span class="goods-headline">家居商品</span>
                     <div class="goods-more">
                         <span class="goods-added">更多</span>
-                        <Icon type="ios-arrow-right"></Icon>
-                        <Icon type="ios-arrow-right"></Icon>
+                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
+                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
                     </div>
                 </div>
                 <div class="goods-list">
@@ -116,8 +116,8 @@
                     <span class="goods-headline">建材商品</span>
                     <div class="goods-more">
                         <span class="goods-added">更多</span>
-                        <Icon type="ios-arrow-right"></Icon>
-                        <Icon type="ios-arrow-right"></Icon>
+                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
+                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
                     </div>
                 </div>
                 <div class="goods-list">

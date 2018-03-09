@@ -151,15 +151,6 @@
   }
 
   // 轮播图
-  // .ivu-carousel-active {
-  //   button {
-  //     width: 10px;
-  //     height: 10px;
-  //     border-radius: 50%;
-  //     margin-top: -46px;
-  //   }
-  // }
-
   .ivue-banner {
     height: 600px;
     .ivu-carousel-dots {
@@ -168,6 +159,7 @@
           width: 10px;
           height: 10px;
           border-radius: 50%;
+          margin: 0 12px;
         }
       }
     }
@@ -194,6 +186,18 @@
         font-size: 16px;
         color: #788492;
         float: right;
+        cursor: pointer;
+        .goods-added {
+          margin-right: 6px;
+        }
+        .goods-added-ios {
+          margin-right: -5px;
+          font-size: 18px;
+          vertical-align: middle;
+        }
+      }
+      .goods-more:hover {
+        color: #49cbcd;
       }
       .goods-list {
         margin-top: 20px;
@@ -216,6 +220,7 @@
             height: 100%;
             text-align: center;
             padding-top: 184px;
+
             span {
               font-size: 30px;
               color: #364049;
@@ -250,6 +255,7 @@
               background-color: #49cbcd;
               text-align: center;
               line-height: 44px;
+              cursor: pointer;
               p {
                 font-size: 18px;
                 color: #ffffff;
