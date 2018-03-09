@@ -4,6 +4,7 @@ import Index from "../view/index"; //首页
 import Login from "../view/login"; //登录页
 import Regist from "../view/regist"; //注册页
 import Forgotpwd from "../view/forgotpwd.vue"; //忘记密码
+import Gooddetail from "../view/gooddetail.vue"; //商品详情页
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
             path: "/forgotpwd",
             component: Forgotpwd,
             meta: { title: "忘记密码" }
+        },
+        {
+            path: "/gooddetail",
+            component: Gooddetail,
+            meta: { title: "商品详情" }
         }
     ]
 });
