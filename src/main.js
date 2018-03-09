@@ -8,8 +8,8 @@ import router from "./router";
 import iView from "iview"; //iview模块
 
 //styles
-//import "./my-theme/index.less"; //自定义主题
 import "iview/dist/styles/iview.css"; //iview样式
+import "./assets/public/selftheme.less"; //自定义主题
 import "./assets/public/reset.css"; //初始化默认样式
 
 Vue.config.productionTip = false;
