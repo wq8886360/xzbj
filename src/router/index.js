@@ -19,17 +19,17 @@ export default new Router({
         {
             path: "/login",
             component: Login,
-            meta: { title: "登录" }
+            meta: { title: "登录", bg: "#fff", headerShow: false }
         },
         {
             path: "/regist",
             component: Regist,
-            meta: { title: "注册", footShow: false }
+            meta: { title: "注册", footShow: false, headerShow: false }
         },
         {
             path: "/forgotpwd",
             component: Forgotpwd,
-            meta: { title: "忘记密码", footShow: false }
+            meta: { title: "忘记密码", footShow: false, headerShow: false }
         },
         {
             path: "/gooddetail",
