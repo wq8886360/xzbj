@@ -4,9 +4,9 @@
             <img src="../assets/img/logo.png" alt="">
             <div class="step">
                 <Steps :current="current">
-                    <Step title="设置账号"></Step>
-                    <Step title="填写账户信息"></Step>
-                    <Step title="注册完成"></Step>
+                    <Step title="填写账号"></Step>
+                    <Step title="设置新密码"></Step>
+                    <Step title="完成"></Step>
                 </Steps>
             </div>
         </div>

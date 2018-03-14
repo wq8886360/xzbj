@@ -6,3 +6,5 @@ export const userInformation = params =>
     post("/znzp/registeruser/userInformation.shtml", params); //新用户填写信息
 export const amendPassword = params =>
     post("/znzp/registeruser/amendPassword.shtml", params); //修改密码
+export const submitLogin = params =>
+    post("/znzp/registeruser/submitLogin.shtml", params); //登录

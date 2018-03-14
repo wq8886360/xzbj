@@ -1,5 +1,5 @@
 <template>
-    <div class="header">
+    <div class="header" v-if="isShow">
         <div class="content">
             <div class="content-left">
                 <div class="region">
@@ -31,10 +31,28 @@ export default {
     components: {
         Icon
     },
+    watch: {
+        $route(to, from) {
+            this.get_foot_state(to.meta.headerShow);
+        }
+    },
+    methods: {
+        get_foot_state(state) {
+            if (state === false) {
+                this.isShow = false;
+            } else {
+                this.isShow = true;
+            }
+        }
+    },
     data() {
         return {
-            region: "杭州"
+            region: "杭州",
+            isShow: true
         };
+    },
+    created() {
+        this.get_foot_state(this.$route.meta.headerShow);
     }
 };
 </script>
