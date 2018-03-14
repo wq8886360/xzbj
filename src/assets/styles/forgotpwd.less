@@ -1,0 +1,106 @@
+@import "../public/public.less";
+@import "../public/theme.less";
+.forgotpwd {
+    .logo {
+        .width-1260-center;
+        padding-top: 30px;
+        img {
+            width: 92px;
+            height: 92px;
+        }
+        .step {
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            top: -40px;
+            padding-left: 60px;
+        }
+    }
+    .form-box {
+        min-width: 1260px;
+        .regist-form-0 {
+            width: 300px;
+            margin: 120px auto 0;
+            input {
+                .zl-input;
+            }
+            .code {
+                overflow: hidden;
+                margin: 20px 0 10px;
+                .code-input {
+                    width: 180px;
+                }
+                .get-code {
+                    .zl-btn;
+                    width: 100px;
+                    float: right;
+                    height: 38px;
+                }
+            }
+            .error {
+                color: #fc6532;
+                margin-bottom: 10px;
+                i {
+                    font-size: 15px;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                }
+            }
+            .submit {
+                .zl-btn;
+                height: 42px;
+            }
+        }
+        .regist-form-1 {
+            width: 300px;
+            margin: 120px auto 0;
+            input {
+                .zl-input;
+            }
+            .password,
+            .password-again {
+                margin-top: 20px;
+            }
+            .error {
+                color: #fc6532;
+                margin: 10px 0 0;
+                i {
+                    font-size: 15px;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                }
+            }
+            .btn-box {
+                overflow: hidden;
+                .submit {
+                    .zl-btn;
+                    height: 42px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .regist-form-2 {
+            width: 300px;
+            margin: 120px auto 0;
+            text-align: center;
+            i {
+                font-size: 72px;
+                color: #49cbcd;
+                margin-right: 40px;
+            }
+            div {
+                text-align: left;
+                display: inline-block;
+                position: relative;
+                top: -10px;
+                .msg {
+                    font-size: 18px;
+                }
+                .jump {
+                    font-size: 14px;
+                    color: #364049;
+                }
+            }
+        }
+    }
+}

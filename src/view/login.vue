@@ -23,7 +23,7 @@
 </template>
 <script>
 import { Icon, Checkbox } from "iview";
-import { submitLogin } from "../http/api";
+import {} from "../http/api";
 export default {
     components: {
         Icon,
@@ -34,11 +34,7 @@ export default {
             single: false
         };
     },
-    created() {
-        submitLogin().then(response => {
-            console.log(response);
-        });
-    }
+    created() {}
 };
 </script>
 

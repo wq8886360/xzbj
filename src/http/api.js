@@ -1,8 +1,8 @@
 import { post, get } from "./config";
 
-export const subRegisteriPhone = params =>
-    post("/znzp/registeruser/subRegisteriPhone.shtml", params);
-export const submitLogin = params =>
-    post("/znzp/registeruser/submitLogin.shtml", params); //登录
-export const forgetPassword = params =>
-    post("/znzp/registeruser/forgetPassword.shtml", params); //短信验证
+export const phonecode = params =>
+    post("/znzp/registeruser/phonecode.shtml", params); //短信验证码验证
+export const userInformation = params =>
+    post("/znzp/registeruser/userInformation.shtml", params); //新用户填写信息
+export const amendPassword = params =>
+    post("/znzp/registeruser/amendPassword.shtml", params); //修改密码

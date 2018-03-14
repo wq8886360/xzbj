@@ -39,7 +39,7 @@
                     <span>{{err_msg_1}}</span>
                 </div>
                 <div class="btn-box">
-                    <button class="submit" @click="info_submit()">提交</button>
+                    <button :disabled="dis" class="submit" @click="info_submit()">提交</button>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
 </template>
 <script>
 import { Steps, Step, Icon, Checkbox } from "iview";
-import { subRegisteriPhone } from "../http/api";
+import { phonecode, userInformation } from "../http/api";
 export default {
     components: {
         Steps,
@@ -72,25 +72,11 @@ export default {
                 message: "手机格式错误"
             }
         ],
-        code: ["required"],
-        username: [
-            "required",
-            {
-                test: /^[0-9a-zA-Z?!_-]{3,30}$/,
-                message: "用户名格式错误"
-            }
-        ],
-        password: [
-            "required",
-            {
-                test: /^[0-9a-zA-Z?!_-]{6,30}$/,
-                message: "密码格式错误"
-            }
-        ]
+        code: ["required"]
     },
     data() {
         return {
-            current: 1,
+            current: 0,
             agreedState: true,
             err_msg_0: "",
             err_msg_1: "",
@@ -99,7 +85,8 @@ export default {
             time: 0,
             username: "",
             password: "",
-            passwordAgain: ""
+            passwordAgain: "",
+            dis: false
         };
     },
     computed: {
@@ -115,7 +102,7 @@ export default {
             if (this.$vuerify.check()) {
                 this.err_msg_0 = "";
                 if (this.agreedState) {
-                    subRegisteriPhone({
+                    phonecode({
                         iPhone: this.phone,
                         vcode: this.code
                     }).then(response => {
@@ -168,16 +155,22 @@ export default {
                 err_arr.push("密码不一致");
             }
             if (err_arr.length == 0) {
+                this.dis = true;
                 this.err_msg_1 = "";
-                subRegisteriPhone({
+                userInformation({
+                    iPhone: this.phone,
                     name: this.username,
                     password: this.password
                 }).then(response => {
+                    this.dis = false;
                     console.log(response);
                     if (response.data.status == 1000) {
+                        this.current++;
                         setTimeout(() => {
                             this.$router.push({ path: "/" });
                         }, 3000);
+                    } else {
+                        this.err_msg_1 = response.data.message;
                     }
                 });
             } else {
