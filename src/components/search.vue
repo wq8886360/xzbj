@@ -1,32 +1,32 @@
 <template>
-    <!-- 搜索组件 -->
-    <div class="search">
-        <div class="head">
-            <img src="../assets/img/logo.png" alt="">
-            <div class="meau">
-                <ul>
-                    <li>首页</li>
-                    <li>建材商品</li>
-                    <li>家居商品</li>
-                    <li>品牌活动</li>
-                    <li>整包方案</li>
-                    <li>户型</li>
-                </ul>
-            </div>
-            <div class="find">
-                <input type="text" placeholder="请输入">
-                <Icon class="search-ios-search" type="ios-search"></Icon>
-            </div>
-        </div>
+  <!-- 搜索组件 -->
+  <div class="search">
+    <div class="head">
+      <img src="../assets/img/logo.png" alt="">
+      <div class="meau">
+        <ul>
+          <li>首页</li>
+          <li>建材商品</li>
+          <li>家居商品</li>
+          <li>品牌活动</li>
+          <li>整包方案</li>
+          <li>户型</li>
+        </ul>
+      </div>
+      <div class="find">
+        <input type="text" placeholder="请输入">
+        <Icon class="search-ios-search" type="ios-search"></Icon>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 import { Icon } from "iview";
 export default {
-    components: {
-        Icon
-    }
+  components: {
+    Icon
+  }
 }
 </script>
 
@@ -42,6 +42,10 @@ export default {
     position: relative;
     overflow: hidden;
     margin-top: 34.1px;
+    img {
+      width: 92px;
+      height: 92px;
+    }
     .meau {
       position: relative;
       font-size: 16px;
