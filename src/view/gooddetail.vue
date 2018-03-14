@@ -37,7 +37,6 @@
                         <li class="sale">7988元</li>
                     </ul>
                 </div>
-
                 <div class="norms">
                     <div class="norms-left label">
                         <p>规格：</p>
@@ -45,29 +44,28 @@
                     <div class="norms-right">
                         <ul>
                             <li v-for="item in 4">1.5*2mm</li>
-                            <!-- <li>1.5*2mm</li>
-                            <li>1.5*2mm</li>
-                            <li class="norms-right-last">1.5*2mm</li> -->
                         </ul>
                     </div>
                 </div>
+
                 <div class="dispatching">
                     <div class="norms-left label">
                         <p>配送至：</p>
                     </div>
                 </div>
+
                 <div class="number">
                     <div class="number-left label">
                         <p>数量：</p>
                     </div>
                 </div>
+
                 <div class="purchase">
                     <div>
                         <div class="purchase-left label">
                             <p>收货时间：</p>
                         </div>
                     </div>
-
                 </div>
 
             </div>
