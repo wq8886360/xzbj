@@ -1,24 +1,27 @@
 import axios from "axios";
 import qs from "qs";
 
-
 axios.defaults.withCredentials = true;
-// axios.defaults.baseURL = "http://v20-front-api.shunliandongli.com";
+axios.defaults.baseURL = "http://192.168.8.210:8080";
 axios.defaults.timeout = 5000;
 axios.defaults.headers = {
-    "Content-Type": "application/x-www-form-urlencoded",
+    "Content-Type": "application/x-www-form-urlencoded"
 };
 
 // request全局拦截
-axios.interceptors.request.use(config => {
-    return config
-},error => {
-    return Promise.reject(error)
-})
+axios.interceptors.request.use(
+    config => {
+        return config;
+    },
+    error => {
+        return Promise.reject(error);
+    }
+);
 
 //response全局拦截
-axios.interceptors.response.use(response => {
-        return response
+axios.interceptors.response.use(
+    response => {
+        return response;
     },
     error => {
         return Promise.resolve(error.response);
