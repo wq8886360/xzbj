@@ -6,7 +6,7 @@
             </div>
             <div class="head-search">
                 <input type="text" placeholder="请输入">
-                <img src="../assets/img/search_nor.png" alt="">
+                <Icon class="head-ios-search" type="ios-search"></Icon>
             </div>
         </div>
         <!-- 全部商品分类 -->
@@ -58,7 +58,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- 轮播图 -->
         <div class="ivue-banner">
             <Carousel autoplay arrow="never">
@@ -80,7 +79,6 @@
             </Carousel>
 
         </div>
-
         <!-- 家具商品 -->
         <div class="good-box">
             <div class="goods">
