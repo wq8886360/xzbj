@@ -5,7 +5,7 @@
             <div class="login-form">
                 <input class="user" type="text" placeholder="请输入手机号/用户名">
                 <input class="pwd" type="password" placeholder="请输入密码">
-                <div class="error" v-if="false">
+                <div class="error" v-if="true">
                     <Icon type="minus-circled"></Icon>
                     <span>请输入账户名！</span>
                 </div>
@@ -23,6 +23,7 @@
 </template>
 <script>
 import { Icon, Checkbox } from "iview";
+import { submitLogin } from "../http/api";
 export default {
     components: {
         Icon,
@@ -32,6 +33,11 @@ export default {
         return {
             single: false
         };
+    },
+    created() {
+        submitLogin().then(response => {
+            console.log(response);
+        });
     }
 };
 </script>

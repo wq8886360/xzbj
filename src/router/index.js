@@ -23,7 +23,7 @@ export default new Router({
         {
             path: "/regist",
             component: Regist,
-            meta: { title: "注册" }
+            meta: { title: "注册", footShow: false }
         },
         {
             path: "/forgotpwd",

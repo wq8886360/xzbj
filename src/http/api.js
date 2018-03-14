@@ -1,5 +1,8 @@
 import { post, get } from "./config";
 
-//登录注册模块
-export const callback_uri = 'http://v20-wx.shunliandongli.com/#/user/authorise'; //微信回调域名
-export const codeList = params => get('/member/register/codeList', params); //推荐人列表
+export const subRegisteriPhone = params =>
+    post("/znzp/registeruser/subRegisteriPhone.shtml", params);
+export const submitLogin = params =>
+    post("/znzp/registeruser/submitLogin.shtml", params); //登录
+export const forgetPassword = params =>
+    post("/znzp/registeruser/forgetPassword.shtml", params); //短信验证
