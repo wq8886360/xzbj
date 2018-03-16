@@ -14,18 +14,20 @@
         <!-- 商品图片 -->
         <div class="gooddetail-picture">
             <div class="gooddetail-left">
-                <img src="../assets/img/bathroom.jpg" alt="">
-                <div class="gooddetail-left-mask">
-                    <p>商品编号：54871</p>
+                <div class="img-box">
+                    <img src="../assets/img/bathroom.jpg" alt="">
+                    <div class="gooddetail-left-mask">
+                        <p>商品编号：54871</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="telephone">
-                <p>售后联系电话：13866668888</p>
+                <p class="telephone">
+                    售后联系电话：13866668888
+                </p>
             </div>
 
             <div class="gooddetail-right">
-                <p>宜家现代日式双人床</p>
+                <p class="good-title">宜家现代日式双人床</p>
                 <div class="gooddetail-right-pirce">
                     <ul class="gooddetail-up">
                         <li class="title">小猪扮家价</li>
@@ -37,33 +39,53 @@
                         <li class="sale">7988元</li>
                     </ul>
                 </div>
-                <div class="norms">
-                    <div class="norms-left label">
-                        <p>规格：</p>
+                <div class="options">
+                    <div class="spec">
+                        <div class="label">规格：</div>
+                        <div class="item">
+                            <ul>
+                                <li :class="{active: index == specs_index}"  v-for="(item,index) in 4" :key="index" @click="chosee_specs(index)">1.5*2mm</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="norms-right">
-                        <ul>
-                            <li v-for="item in 4">1.5*2mm</li>
-                        </ul>
+                    <div class="distribution">
+                        <div class="label">配送至：</div>
+                        <div class="item">
+                            <Select v-model="model1" style="width:120px;height: 32px;">
+                                <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                            </Select>
+                            <Select v-model="model2" style="width:120px;height: 32px;">
+                                <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                            </Select>
+                            <Select v-model="model3" style="width:120px;height: 32px;">
+                                <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                            </Select>
+                        </div>
                     </div>
-                </div>
-
-                <div class="dispatching">
-                    <div class="norms-left label">
-                        <p>配送至：</p>
+                    <div class="num">
+                        <div class="label">数量：</div>
+                        <div class="item">
+                            <div class="num-input">
+                                <div class="reduce"><Icon type="minus-round"></Icon></div>
+                                <span>1</span>
+                                <div class="add"><Icon type="plus-round"></Icon></div>
+                            </div>
+                            <span class="stock">库存1234件</span>
+                        </div>
                     </div>
-                </div>
-
-                <div class="number">
-                    <div class="number-left label">
-                        <p>数量：</p>
+                    <div class="num">
+                        <div class="label">收货时间：</div>
+                        <div class="item">
+                            <Select v-model="model4" style="width:120px;height: 32px;">
+                                <Option v-for="item in cityList2" :value="item.value" :key="item.value">{{ item.label }}</Option>
+                            </Select>
+                        </div>
                     </div>
-                </div>
-
-                <div class="purchase">
-                    <div>
-                        <div class="purchase-left label">
-                            <p>收货时间：</p>
+                    <div class="operation">
+                        <div class="label"></div>
+                        <div class="item">
+                            <button class="buy">立即购买</button>
+                            <button class="join-car">加入购物车</button>
                         </div>
                     </div>
                 </div>
@@ -109,34 +131,94 @@
         </div>
 
         <div class="show">
-            <img src="../assets/img/bathroom.jpg" alt="">
-            <div class="show-mask">
-                <span>欧式原木大床</span>
-                <div class="show-content">
-                    <p>材质：橡木原木</p>
-                    <p>尺寸：200*200*60mm</p>
-                </div>
-            </div>
-            <img src="../assets/img/bathroom.jpg" alt="">
-            <div class="show-cover">
-                <span>欧式原木大床</span>
-                <div class="show-content">
-                    <p>手工打磨，机器抛光</p>
-                    <p>80后创意工艺设计师原创设计</p>
-                </div>
-            </div>
+            <ul>
+                <li v-for="item in 2" style='background-image: url(http://img5.imgtn.bdimg.com/it/u=2003488071,325628006&fm=27&gp=0.jpg)'>
+                    <div class="show-mask">
+                        <span>欧式原木大床</span>
+                        <div class="show-content">
+                            <p>材质：橡木原木</p>
+                            <p>尺寸：200*200*60mm</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
     </div>
 </template>
 <script>
 import Search from "../components/search.vue";
-import { Icon, Breadcrumb, BreadcrumbItem, } from "iview";
+import { Icon, Breadcrumb, BreadcrumbItem, Select, Option } from "iview";
 export default {
     components: {
         Search,
         Breadcrumb,
-        BreadcrumbItem
+        BreadcrumbItem,
+        Select,
+        Option,
+        Icon
+    },
+    data() {
+        return {
+            specs_index: null,
+            cityList: [
+                {
+                    value: "New York",
+                    label: "New York"
+                },
+                {
+                    value: "London",
+                    label: "London"
+                },
+                {
+                    value: "Sydney",
+                    label: "Sydney"
+                },
+                {
+                    value: "1",
+                    label: "1"
+                },
+                {
+                    value: "2",
+                    label: "2"
+                },
+                {
+                    value: "Ottawa",
+                    label: "Ottawa"
+                },
+                {
+                    value: "Paris",
+                    label: "Paris"
+                },
+                {
+                    value: "Canberra",
+                    label: "Canberra"
+                }
+            ],
+            cityList2: [
+                {
+                    value: "收货时间不限",
+                    label: "收货时间不限"
+                },
+                {
+                    value: "周一至周五",
+                    label: "周一至周五"
+                },
+                {
+                    value: "周六日/节假日",
+                    label: "周六日/节假日"
+                }
+            ],
+            model1: "",
+            model2: "",
+            model3: "",
+            model4: ""
+        };
+    },
+    methods: {
+        chosee_specs(index) {
+            this.specs_index = index;
+        }
     }
 };
 </script>
