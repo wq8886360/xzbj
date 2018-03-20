@@ -212,12 +212,12 @@
 
         .good-list-left {
           float: left;
-          height: 496px;
-          width: 248px;
+          height: 728px;
+          width: 236px;
           position: relative;
           img {
-            height: 496px;
-            width: 248px;
+            height: 728px;
+            width: 236px;
           }
           .goods-list-title {
             position: absolute;
@@ -231,47 +231,85 @@
             span {
               font-size: 30px;
               color: #364049;
+              font-weight: bold;
+              margin-top: 245px;
             }
             p {
               font-size: 14px;
               color: #485460;
+              margin-top: 4px;
+            }
+            .goods-price {
+              font-size: 22px;
+              color: #fc6532;
+              margin-top: 16px;
             }
           }
         }
         .good-list-right {
           float: right;
-          width: 992px;
-          height: 496px;
+          width: 1024px;
+          height: 354px;
           position: relative;
           .good-picture {
             float: left;
-            height: 248px;
-            width: 248px;
+            margin: 0 0 20px 20px;
+            height: 354px;
+            width: 236px;
+            // background-color: pink;
             position: relative;
             overflow: hidden;
             img {
               width: 100%;
+              display: block;
             }
+            .good-title {
+              text-align: center;
+              background-color: #ffffff;
+              width: 236px;
+              height: 354px;
+              p {
+                font-size: 18px;
+                color: #364049;
+
+                padding-top: 18px;
+              }
+              .model {
+                font-size: 12px;
+                color: #788492;
+              }
+            }
+
             .good-mask {
               position: absolute;
               left: 0;
-              bottom: -44px;
-              width: 248px;
-              height: 44px;
+              bottom: -60px;
+              width: 236px;
+              height: 60px;
               transition: 0.2s linear all;
               background-color: #49cbcd;
-              text-align: center;
-              line-height: 44px;
               cursor: pointer;
+              padding-left: 16px;
+
               p {
-                font-size: 18px;
+                font-size: 12px;
                 color: #ffffff;
+                padding-top: 10px;
+              }
+              span {
+                font-size: 12px;
+                color: #ffffff;
+                display: block;
+                margin-top: 8px;
               }
             }
           }
           .good-picture:hover {
             .good-mask {
               bottom: 0;
+            }
+            .model {
+              display: none;
             }
           }
         }
@@ -280,8 +318,8 @@
   }
 
   .null {
-    margin-top:65px;
-    margin-bottom:56px;
+    margin-top: 65px;
+    margin-bottom: 56px;
     // 首页搜索为空
     .empty {
       width: 100%;

@@ -15,21 +15,14 @@
             </div>
             <!-- 个人中心右边 -->
             <div class="head-right">
-                <div class="head-right-title">
-                    <ul>
-                        <li>全部订单</li>
-                        <li>待付款
-                            <span>0</span>
-                        </li>
-                        <li>待发货
-                            <span>2</span>
-                        </li>
-                        <li>待收货
-                            <span>3</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="heading">
+                <Tabs active-key="key1">
+                    <Tab-pane label="全部订单" key="key1">全部订单</Tab-pane>
+                        
+                    <Tab-pane label="待付款" key="key2">待付款</Tab-pane>
+                    <Tab-pane label="待发货" key="key3">待发货</Tab-pane>
+                    <Tab-pane label="待收货" key="key3">待收货</Tab-pane>
+                </Tabs>
+                <!-- <div class="heading">
                     <ul>
                         <li class="goods">商品</li>
                         <li class="price">单价(元)</li>
@@ -38,9 +31,9 @@
                         <li class="state">交易状态</li>
                         <li class="operate">操作</li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- 订单 -->
-                <div class="order">
+                <!-- <div class="order">
                     <div class="order-title">
                         <span>订单编号：20170220199165478962</span>
                         <span>2018-3-12 13:56</span>
@@ -77,7 +70,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
@@ -88,10 +81,13 @@
 </template>
 <script>
 import Search from "../components/search.vue";
-import { Icon } from "iview";
+import { Icon, Tabs, TabPane } from "iview";
 export default {
     components: {
-        Search
+        Search,
+        Tabs,
+        TabPane
+
     }
 }
 
