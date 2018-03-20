@@ -29,23 +29,11 @@
                         <li>家具软装
                             <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
                             <div class="menu-list">
-
-                            </div>
-                        </li>
-                        <li>灯饰照明
-                            <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
-                            <div class="menu-list">
-
-                            </div>
-                        </li>
-                        <li>家用厨房电器
-                            <Icon class="ios-right" type="ios-arrow-right"></Icon>
-                            <div class="menu-list">
-
                             </div>
                         </li>
                     </ul>
                 </div>
+
             </div>
             <div class="menu">
                 <ul>
@@ -58,82 +46,113 @@
                 </ul>
             </div>
         </div>
-        <!-- 轮播图 -->
-        <div class="ivue-banner">
-            <Carousel autoplay arrow="never">
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-                <Carousel-item>
-                    <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
-                </Carousel-item>
-            </Carousel>
+        <div class="effective" v-if="true">
+            <!-- 轮播图 -->
+            <div class="ivue-banner">
+                <Carousel autoplay arrow="never">
+                    <Carousel-item>
+                        <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                    </Carousel-item>
+                    <Carousel-item>
+                        <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                    </Carousel-item>
+                    <Carousel-item>
+                        <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                    </Carousel-item>
+                    <Carousel-item>
+                        <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                    </Carousel-item>
+                    <Carousel-item>
+                        <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
+                    </Carousel-item>
+                </Carousel>
 
-        </div>
-        <!-- 家具商品 -->
-        <div class="good-box">
-            <div class="goods">
-                <div class="goods-title">
-                    <span class="goods-headline">家居商品</span>
-                    <div class="goods-more">
-                        <span class="goods-added">更多</span>
-                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
-                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
-                    </div>
-                </div>
-                <div class="goods-list">
-                    <div class="good-list-left">
-                        <img src="../assets/img/houseHold.jpg" alt="">
-                        <div class="goods-list-title">
-                            <span>家居</span>
-                            <p>高品质生活的首选</p>
+            </div>
+            <!-- 家具商品 -->
+            <div class="good-box">
+                <div class="goods">
+                    <div class="goods-title">
+                        <span class="goods-headline">家居商品</span>
+                        <div class="goods-more">
+                            <span class="goods-added">更多</span>
+                            <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
+                            <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
                         </div>
                     </div>
-                    <div class="good-list-right">
-                        <div class="good-picture" v-for="(item,index) in 8" :key="index">
-                            <img src="../assets/img/bathroom.jpg" alt="">
-                            <div class="good-mask">
-                                <p>家居·床</p>
+                    <div class="goods-list">
+                        <div class="good-list-left">
+                            <img src="../assets/img/houseHold.jpg" alt="">
+                            <div class="goods-list-title">
+                                <span>成套家具</span>
+                                <p>多款风格，多重工艺</p>
+                                <p class="goods-price">¥1349起</p>
+                            </div>
+                        </div>
+                        <div class="good-list-right">
+                            <div class="good-picture" v-for="(item,index) in 8" :key="index">
+                                <!-- v-for="(item,index) in 8" :key="index" -->
+                                <img src="../assets/img/bathroom.jpg" alt="">
+                                <div class="good-title">
+                                    <p>复古式电视柜</p>
+                                    <span class="model">YS1D80</span>
+                                </div>
+
+                                <div class="good-mask">
+                                    <p>型号：YS1D80</p>
+                                    <span>解忧杂货铺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 建材商品 -->
+                <div class="goods">
+                    <div class="goods-title">
+                        <span class="goods-headline">家居商品</span>
+                        <div class="goods-more">
+                            <span class="goods-added">更多</span>
+                            <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
+                            <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
+                        </div>
+                    </div>
+                    <div class="goods-list">
+                        <div class="good-list-left">
+                            <img src="../assets/img/houseHold.jpg" alt="">
+                            <div class="goods-list-title">
+                                <span>成套家具</span>
+                                <p>多款风格，多重工艺</p>
+                                <p class="goods-price">¥1349起</p>
+                            </div>
+                        </div>
+                        <div class="good-list-right">
+                            <div class="good-picture" v-for="(item,index) in 8" :key="index">
+                                <!-- v-for="(item,index) in 8" :key="index" -->
+                                <img src="../assets/img/bathroom.jpg" alt="">
+                                <div class="good-title">
+                                    <p>复古式电视柜</p>
+                                    <span class="model">YS1D80</span>
+                                </div>
+
+                                <div class="good-mask">
+                                    <p>型号：YS1D80</p>
+                                    <span>解忧杂货铺</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- 建材商品 -->
-            <div class="goods">
-                <div class="goods-title">
-                    <span class="goods-headline">建材商品</span>
-                    <div class="goods-more">
-                        <span class="goods-added">更多</span>
-                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
-                        <Icon class="goods-added-ios" type="ios-arrow-right"></Icon>
-                    </div>
+        </div>
+
+        <div class="null" v-if="false">
+            <!-- 首页搜索为空 -->
+            <div class="empty">
+                <div class="empty-image">
+                    <img src="../assets/img/commoditySearch.png" alt="">
                 </div>
-                <div class="goods-list">
-                    <div class="good-list-left">
-                        <img src="../assets/img/houseHold.jpg" alt="">
-                        <div class="goods-list-title">
-                            <span>建材</span>
-                            <p>绿色、健康、环保</p>
-                        </div>
-                    </div>
-                    <div class="good-list-right">
-                        <div class="good-picture" v-for="(item,index) in 8" :key="index">
-                            <img src="../assets/img/bathroom.jpg" alt="">
-                            <div class="good-mask">
-                                <p>绿色、健康、环保</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="empty-cue">
+                    <p>亲爱的，很抱歉，没有找到与
+                        <span>“烟灰色大理石”</span>相关的商品</p>
                 </div>
             </div>
         </div>

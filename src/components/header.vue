@@ -2,7 +2,7 @@
     <div class="header" v-if="isShow">
         <div class="content">
             <div class="content-left">
-                <div class="region">
+                <!-- <div class="region">
                     杭州<Icon type="ios-arrow-down"></Icon>
                     <div class="dropdown">
                         <ul>
@@ -11,7 +11,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="line">|</div>
+                <div class="line">|</div> -->
                 <div class="download"><a href="">下载小猪扮家客户端</a></div>
             </div>
             <div class="content-right">
@@ -20,7 +20,25 @@
                     <i class="line">|</i>
                     <span><router-link to="/regist">注册</router-link></span>
                 </div>
-                <div class="is-login"></div>
+                <!-- <div class="is-login">
+                    <div class="person-list">
+                        <span>18358205737</span>
+                        <Icon type="ios-arrow-down"></Icon>
+                        <div class="dropdown">
+                            <ul>
+                                <li>我的订单</li>
+                                <li>地址管理</li>
+                                <li>个人中心</li>
+                                <li>退出</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="buycar">
+                        <Icon type="ios-cart-outline"></Icon>
+                        <span>购物车 （2）</span>
+                    </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -139,6 +157,66 @@ export default {
             }
             a:hover {
                 color: #fff;
+            }
+            .is-login {
+                .buycar {
+                    height: 100%;
+                    width: 120px;
+                    background: #485460;
+                    text-align: center;
+                    display: inline-block;
+                    cursor: pointer;
+                    i {
+                        font-size: 16px;
+                        margin-right: 8px;
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+                .buycar:hover {
+                    background: #fff;
+                    color: #788492;
+                }
+                .person-list {
+                    display: inline-block;
+                    width: 130px;
+                    height: 100%;
+                    margin-right: 40px;
+                    text-align: center;
+                    position: relative;
+                    i {
+                        font-size: 16px;
+                        vertical-align: middle;
+                        margin-left: 10px;
+                    }
+                    .dropdown {
+                        width: 100%;
+                        background: #fff;
+                        display: none;
+                        position: absolute;
+                        z-index: 10;
+                        left: 0;
+                        top: 50px;
+                        box-shadow: 0 0 2px 0;
+                        ul {
+                            li {
+                                height: 36px;
+                                line-height: 36px;
+                            }
+                            li:hover {
+                                background: @activeColor;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                .person-list:hover {
+                    background: #fff;
+                    color: #788492;
+                    .dropdown {
+                        display: block;
+                    }
+                }
             }
         }
     }
