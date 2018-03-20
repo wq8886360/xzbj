@@ -7,6 +7,11 @@ import Forgotpwd from "../view/forgotpwd.vue"; //忘记密码
 import Gooddetail from "../view/gooddetail.vue"; //商品详情页
 import Personal from "../view/personal.vue"; //个人中心
 
+import Shoppingcart from "../view/Shoppingcart.vue"; //购物车
+import Affirminist from "../view/affirminist.vue"; //确认订单
+import Paysuccess from "../view/paysuccess.vue"; //支付成功
+import Wypayconfirm from "../view/wypayconfirm.vue"; //网银支付确认
+
 Vue.use(Router);
 
 export default new Router({
@@ -40,6 +45,25 @@ export default new Router({
             path: "/personal",
             component: Personal,
             meta: { title: "个人中心" }
+        },
+        {
+            path: "/shoppingcart",
+            component: Shoppingcart,
+            meta: { title: "购物车" }
+        },
+        {
+            path: "/affirminist",
+            component: Affirminist,
+            meta: { title: "确认订单" }
+        },
+        {
+            path: "/paysuccess",
+            component: Paysuccess,
+            meta: { title: "支付成功" }
+        },
+        {
+            path: "/wypayconfirm",
+            component: Wypayconfirm
         }
     ]
 });
