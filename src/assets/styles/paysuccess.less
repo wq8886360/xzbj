@@ -1,0 +1,136 @@
+.paysuccess {
+    .width-center {
+        width: 1260px;
+        margin: 0 auto;
+    }
+    // 状态显示栏
+    .state {
+        width: 536px;
+        height: 77px;
+        margin: 0 auto;
+        .state-head {
+            overflow: hidden;
+            font-size: 16px;
+            text-align: center;
+            span:first-child {
+                float: left;
+            }
+            span:last-child {
+                float: right;
+            }
+        }
+        .plan {
+            width: 504px;
+            height: 32px;
+            margin: 0 auto;
+            margin-top: 18px;
+            overflow: hidden;
+            position: relative;
+            .plan-all {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 2px solid #8898AB; 
+                position: relative;
+                .plan-green {
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;;
+                    top: 50%;
+                    margin-top: -8px;
+                    left: 50%;
+                    margin-left: -8px;
+                    background-color: #49CBCD;
+                    border-radius: 50%;
+                }
+            }
+            .plan-first {
+                float: left;
+            }
+            .plan-second {
+                float: left;
+                margin-left: 204px;
+            }
+            .plan-three {
+                float: right;
+            }
+            .plan-line {
+                width: 204px;
+                height: 2px;
+                background-color: #8898AB;
+                position: absolute;
+                top: 50%;
+                margin-top: -1px;
+                left: 32px;
+            }
+            .line-second {
+                margin-left: 236px;
+            }
+        }
+    }
+    // 支付成功内容
+    .suconent {
+        width: 334px;
+        height: 150px;
+        margin: 122px auto 56px;
+        .suconent-img {
+            width: 100%;
+            height: 72px;
+            overflow: hidden;
+            img {
+                float: left;
+                width: 72px;
+                height: 72px;
+            }
+            .sucont-font {
+                width: 222px;
+                height: 72px;
+                float: left;
+                margin-left: 40px;
+                box-sizing: border-box;
+                padding: 10px 0;
+                font-size: 18px;
+                p {
+                    font-size: 14px;
+                    margin-top: 6px;
+                }
+            }
+        }
+        .paymoney {
+            width: 222px;
+            margin-top: 28px;
+            margin-left: 112px;
+            font-size: 14px;
+            color: #485460;
+            span {
+                color: #FC6532;
+            }
+        }
+    }
+    // 底部按钮
+    .pay-button {
+        width: 300px;
+        height: 36px;
+        margin: 0 auto;
+        overflow: hidden;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 56px;
+        margin-top: 36px;
+        color: #fff;
+        .cancel {
+            width: 120px;
+            height: 36px;
+            background-color: #788492;
+            float: left;
+            cursor: pointer;
+        }
+        .success {
+            width: 120px;
+            height: 36px;
+            background-color: #49CBCD;
+            float: right;
+            cursor: pointer;
+        }
+    }
+}

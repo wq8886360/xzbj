@@ -1,0 +1,363 @@
+.shoppingcart {
+    // 版心
+    .width-center {
+        width: 1260px;
+        margin: 0 auto;
+    }
+    // 头部导航部分
+    .navig {
+        margin-top: 30px;
+        width: 100%;
+        height: 92px;
+        overflow: hidden;
+        line-height: 92px;
+        position: relative;
+        .logo img {
+            width: 92px;
+            height: 92px;
+            float: left;
+        }
+        ul {
+            width: 470px;
+            height: 100%;
+            float: left;
+            margin-left: 88px;
+            overflow: hidden;
+            color: #364049;
+            font-size: 16px;
+            li {
+                float: left;
+                margin-right: 36px;
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+        // 搜索框
+        .search {
+            width: 400px;
+            height: 36px;
+            border: 1px solid #788492;
+            border-radius: 50px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -18px;
+            input {
+                width: 340px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                margin-top: -10px;
+                left: 20px;
+                border: 0;
+                color: #8898AB;
+                outline: none;
+            }
+            img {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 50%;
+                margin-top: -9px;
+                right: 20px;
+            }
+        }
+    }
+    // 全部商品
+    .commodity {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 56px;
+        margin-bottom: 57px;
+        .numred {
+            color: #FC6532;
+            margin-left: 6px;
+        }
+    }
+    // 商品内容部分
+    .content {
+        // 全选，删除
+        .addselect {
+            width: 100%;
+            height: 14px;
+            overflow: hidden;
+            line-height: 14px;
+            .qx {
+                margin-left: 20px;
+                cursor: pointer;
+            }
+            .del {
+                margin-left: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+    // 商品
+    .merchandise {
+        margin-top: 20px;
+        margin-bottom: 56px;
+        .goodsname {
+            margin-left: 20px;
+            font-size: 16px;
+            .toptwo {
+                margin-right: 20px;
+            }
+        }
+        // 商品详情
+        .mer-conter {
+            margin-top: 20px;
+            .mer-head {
+                width: 100%;
+                height: 50px;
+                background-color: #8898AB;
+                color: #FFFFFF;
+                .distance {
+                    overflow: hidden;
+                    line-height: 50px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-align: center;
+                    li {
+                        float: left;
+                    }
+                    li:first-child {
+                        width: 376px;
+                    }
+                    li:nth-child(2) {
+                        width: 172px;
+                    }
+                    li:nth-child(3) {
+                        width: 210px;
+                    }
+                    li:nth-child(4) {
+                        width: 88px;
+                    }
+                    li:last-child {
+                        width: 210px;
+                    }
+                }
+            }
+            .mer-body {
+                width: 100%;
+                height: 140px;
+                background:rgba(136,152,171,0.2);
+                ul {
+                    height: 140px;
+                    overflow: hidden;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #485460;
+                    li {
+                        float: left;
+                    }
+                    li:first-child {
+                        width: 376px;
+                        height: 140px;
+                        position: relative;
+                    img {
+                        position: absolute;
+                        width: 100px;
+                        height: 100px;
+                        top: 50%;
+                        margin-top: -50px;
+                        left: 54px;
+                    }
+                    .picthree {
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -8px;
+                        left: 20px;
+                    }
+                    p {
+                        position: absolute;
+                        width: 160px;
+                        top: 40px;
+                        left: 170px;
+                        overflow:hidden;   
+                        text-overflow:ellipsis;  
+                        display:-webkit-box;   
+                        -webkit-box-orient:vertical;  
+                        -webkit-line-clamp:3;   
+                    }
+                        
+                    }
+                    li:nth-child(2) {
+                        width: 172px;
+                        text-align: center;
+                        line-height: 140px;
+                    }
+                    li:nth-child(3) {
+                        width: 210px;
+                        text-align: center;
+                        line-height: 140px;
+                    }
+                    li:nth-child(4) {
+                        width: 88px;
+                        text-align: center;
+                        line-height: 140px;
+                    }
+                    li:nth-child(5) {
+                        width: 210px;
+                        color: #FC6532;
+                        text-align: center;
+                        line-height: 140px;
+                    }
+                    li:nth-child(6) {
+                        width: 204px;
+                        text-align: center;
+                        line-height: 140px;
+                        span {
+                            cursor: pointer;
+                        }
+                        
+                    }
+                }
+            }
+            .mer-body:nth-child(2n-1) {
+                background-color: #F5F5F5;
+            }
+        }
+    }
+    // 底部合计
+    .mer-foot {
+        width: 100%;
+        height: 150px;
+        margin-top: 66px;
+        margin-bottom: 56px;
+        overflow: hidden;
+        .mer-total {
+            width: 350px;
+            height: 100%;
+            float: right;
+            overflow: hidden;
+            .mer-money {
+                height: 40px;
+                // float: right;
+                font-size: 14px;
+                color: #485460;
+                line-height: 40px;
+                span {
+                    color: #FC6532;
+                }
+                p {
+                    float: left;
+                    margin-left: 88px;
+                }
+                .fontbig {
+                    float: right;
+                    font-size: 28px;
+                    margin-left: 20px;
+                }  
+            }
+            .coding {
+                width: 100%;
+                height: 40px;
+                margin-bottom: 18px;
+                overflow: hidden;
+                line-height: 40px;
+                input {
+                    width: 160px;
+                    height: 40px;
+                    float: right;
+                    padding-left:10px; 
+                }
+                span {
+                    margin-left: 20px;
+                }
+            }
+            .close {
+                width: 120px;
+                height: 36px;
+                background-color: #49CBCD ;
+                text-align: center;
+                line-height: 36px;
+                float: right;
+                margin-top: 18px;
+                color: #fff;
+                cursor:pointer;
+            }
+        }
+    }
+   
+    // 删除弹框窗口背景
+    .wicket-bg {
+        width:100%;  
+        height:100%;  
+        background:rgba(0,0,0,0.3); 
+        position:fixed;  
+        left:0px;  
+        top:0px;    
+        z-index:1000; 
+         // 删除弹框
+         .delzezel {
+            position: fixed;
+            width: 410px;
+            height: 250px;
+            border-radius: 4px;
+            top: 50%;
+            margin-top: -125px;
+            left: 50%;
+            margin-left: -205px;
+            z-index: 99;
+            box-shadow: 0 0 5px 0;
+            background: #FFFFFF;
+            .wicket-head {
+                width: 100%;
+                line-height: 26px;
+                box-sizing: border-box;
+                padding: 15px;
+                overflow: hidden;
+                color: #788492;
+                font-size: 14px;
+                span {
+                    float: left;
+                }
+                .icon-close {
+                    font-size: 26px;
+                    float: right;
+                    cursor: pointer;
+                }
+            }
+            .wicket-cen {
+                width: 188px;
+                height: 24px;
+                line-height: 24px;
+                margin: 0 auto;
+                margin-top: 46px;
+                overflow: hidden;
+                img {
+                    float: left;
+                }
+                span {
+                    font-size: 16px;
+                    color: #788492;
+                    margin-left: 20px;
+                }
+            }
+            .wicket-choose {
+                position: absolute;
+                width: 100%;
+                height: 60px;
+                left: 0;
+                bottom: 0;
+                overflow: hidden;
+                line-height: 60px;
+                text-align: center;
+                color: #fff;
+                cursor: pointer;
+                .choose-calloff {
+                    float: left;
+                    width: 50%;
+                    background-color: #788492;
+                }
+                .choose-confirm {
+                    float: right;
+                    width: 50%;
+                    background-color: #fff;
+                    background-color: #49CBCD;
+                }
+            }
+        }
+    }
+}
