@@ -2,7 +2,7 @@
     <div class="header" v-if="isShow">
         <div class="content">
             <div class="content-left">
-                <div class="region">
+                <!-- <div class="region">
                     杭州<Icon type="ios-arrow-down"></Icon>
                     <div class="dropdown">
                         <ul>
@@ -11,16 +11,16 @@
                         </ul>
                     </div>
                 </div>
-                <div class="line">|</div>
+                <div class="line">|</div> -->
                 <div class="download"><a href="">下载小猪扮家客户端</a></div>
             </div>
             <div class="content-right">
-                <!-- <div class="not-login">
+                <div class="not-login">
                     <span><router-link to="/login">登录</router-link></span>
                     <i class="line">|</i>
                     <span><router-link to="/regist">注册</router-link></span>
-                </div> -->
-                <div class="is-login">
+                </div>
+                <!-- <div class="is-login">
                     <div class="person-list">
                         <span>18358205737</span>
                         <Icon type="ios-arrow-down"></Icon>
@@ -38,7 +38,7 @@
                         <Icon type="ios-cart-outline"></Icon>
                         <span>购物车 （2）</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

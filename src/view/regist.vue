@@ -103,7 +103,7 @@ export default {
                 this.err_msg_0 = "";
                 if (this.agreedState) {
                     phonecode({
-                        iPhone: this.phone,
+                        iphone: this.phone,
                         vcode: this.code
                     }).then(response => {
                         console.log(response);
@@ -158,8 +158,8 @@ export default {
                 this.dis = true;
                 this.err_msg_1 = "";
                 userInformation({
-                    iPhone: this.phone,
-                    name: this.username,
+                    iphone: this.phone,
+                    username: this.username,
                     password: this.password
                 }).then(response => {
                     this.dis = false;
