@@ -2,7 +2,7 @@ import axios from "axios";
 import qs from "qs";
 
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://192.168.8.210:8080";
+axios.defaults.baseURL = "http://192.168.8.138:8080";
 axios.defaults.timeout = 5000;
 axios.defaults.headers = {
     "Content-Type": "application/x-www-form-urlencoded"
