@@ -88,22 +88,7 @@
                 <div class="success" @click="affirmimg = true">确认并付款</div>
             </div>
             <!-- 删除弹框 -->
-            <div class="wicket-bg" v-if="wicketcl">
-                <div class="delzezel">
-                    <div class="wicket-head">
-                        <span>提示</span>
-                        <Icon type="android-close" class="icon-close" @click.native="wicketcl = false"></Icon>
-                    </div>
-                    <div class="wicket-cen">
-                        <img src="../assets/img/attention.png">
-                        <span>确认要取消支付吗？</span>
-                    </div>
-                    <div class="wicket-choose">
-                        <div class="choose-calloff" @click="wicketcl = false">取消</div>
-                        <div class="choose-confirm">确定</div>
-                    </div>
-                </div>
-            </div>
+            <Modal :visible.sync="wicketcl" :content="qxmsg" @determine="affirmpay"></Modal>
             <!-- 确认支付 -->
             <div class="affirmpay" v-if="affirmimg">
                 <div class="affirmpay-img">
@@ -118,10 +103,12 @@
 
 <script>
 import Search from "../components/search"
+import Modal from "../components/modal"
 import {Icon} from "iview"
 export default {
     components: {
       Search,
+      Modal,
       Icon
     },
     data () {
@@ -138,7 +125,8 @@ export default {
             wicketcl:false,     //删除弹窗
             bankdown:true,
             bankup:false,
-            affirmimg:false     //确认支付弹窗
+            affirmimg:false,     //确认支付弹窗
+            qxmsg:"确定要取消支付吗？"
             
         }
     },
@@ -148,6 +136,9 @@ export default {
             this.bankify = !this.bankify
             this.bankup = !this.bankup
             this.bankdown = !this.bankdown
+        },
+        affirmpay () {
+            console.log(666)
         }
     }
 }
