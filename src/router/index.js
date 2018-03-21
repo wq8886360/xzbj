@@ -6,7 +6,7 @@ import Regist from "../view/regist"; //注册页
 import Forgotpwd from "../view/forgotpwd.vue"; //忘记密码
 import Gooddetail from "../view/gooddetail.vue"; //商品详情页
 import Personal from "../view/personal.vue"; //个人中心
-
+import ClassificationList from "../view/classificationList.vue"; //分类列表
 import Shoppingcart from "../view/Shoppingcart.vue"; //购物车
 import Affirminist from "../view/affirminist.vue"; //确认订单
 import Paysuccess from "../view/paysuccess.vue"; //支付成功
@@ -45,6 +45,11 @@ export default new Router({
             path: "/personal",
             component: Personal,
             meta: { title: "个人中心" }
+        },
+        {
+            path: "/classificationlist",
+            component: ClassificationList,
+            meta: { title: "分类" }
         },
         {
             path: "/shoppingcart",
