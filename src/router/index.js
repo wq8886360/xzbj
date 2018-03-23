@@ -19,6 +19,7 @@ import Building from "../view/building.vue"; //建材商品
 import Furniture from "../view/furniture.vue"; //家具商品
 import Brand from "../view/brand.vue"; //品牌活动
 import Store from "../view/store.vue"; //品牌店铺
+import Indent from "../view/indent.vue"; //订单详情
 
 Vue.use(Router);
 
@@ -117,6 +118,11 @@ export default new Router({
             path: "/store",
             component: Store,
             mate: { title: "品牌店铺" }
+        },
+        {
+            path: "/indent",
+            component: Indent,
+            meta: { title: "订单详情" }
         }
     ]
 });
