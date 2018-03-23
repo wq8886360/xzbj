@@ -12,23 +12,35 @@
         <!-- 全部商品分类 -->
         <div class="banner">
             <div class="banner-classify">
-                <p>
+                <p class="classify-title">
                     全部商品分类
                     <Icon class="ios-arrow-down" type="ios-arrow-down"></Icon>
                 </p>
                 <div class="banner-dropdown">
                     <ul>
-                        <li>装修主材
-                            <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                        <li>
+                            <div class="menu-content">
+                                装修主材
+                                <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                            </div>
                             <div class="menu-list">
-                                <div class="item" v-for="item in 8">
-                                    <img src="../assets/img/houseHold.jpg" alt=""> 地板
+                                <div class="item">
+                                    
                                 </div>
                             </div>
                         </li>
-                        <li>家具软装
-                            <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                        <li>
+                            <div class="menu-content">
+                                家具软装
+                                <Icon class="ios-arrow-right" type="ios-arrow-right"></Icon>
+                            </div>
                             <div class="menu-list">
+                                <div class="item" v-for="item in 4">
+                                    <p class="title">成套家具</p>
+                                    <div class="list">
+                                        <span v-for="item in 10">客厅成套餐具</span>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -66,7 +78,6 @@
                         <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
                     </Carousel-item>
                 </Carousel>
-
             </div>
             <!-- 家具商品 -->
             <div class="good-box">
