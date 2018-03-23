@@ -53,12 +53,13 @@
                                     <li>800*800mm</li>
                                     <li>24.00</li>
                                     <li>5</li>
-                                    <li>¥100.00</li>
-                                    <li><span @click="delbezel(item.id,items.id)">删除</span></li>
+                                    <li @click="ceshi(item.id,items.id)">¥100.00</li>
+                                    <li><span @click="wicketcl = true">删除</span></li>
                                 </ul>
                             </div>
                             <!-- 删除弹框 -->
-                            <div class="wicket-bg" v-if="wicketcl">
+                            <Modal :content="qxmsg" :visible.sync="wicketcl" @determine="qdscdel(item.id,items.id)"></Modal>
+                            <!-- <div class="wicket-bg" v-if="wicketcl">
                                 <div class="delzezel">
                                     <div class="wicket-head">
                                         <span>提示</span>
@@ -73,7 +74,7 @@
                                         <div class="choose-confirm" @click="qdscdel(item.id,items.id)">确定</div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>         
                 </div>
@@ -92,18 +93,19 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 <script>
 import { Icon , CheckboxGroup ,Checkbox } from "iview";
 import Search from "../components/search"
+import Modal from "../components/modal"
 export default {
     components:{
         Icon,
         CheckboxGroup,
         Checkbox,
-        Search
+        Search, //搜索框
+        Modal   //删除弹框
     },
      data() {
         return {
@@ -115,6 +117,7 @@ export default {
             tjcode:null,       //推荐人输入的数字
             ALLmoney:0.00,     //结算的钱
             shopnum:0,         // 选择商品件数
+            qxmsg:"确认要删除该商品？",
             good_arr: [
                 {
                     name: "商店1",
@@ -253,7 +256,10 @@ export default {
                 })
                 items.status = flag
                
-                if(this.secondArr.indexOf(items.id)== -1){
+                // if(this.secondArr.indexOf(items.id)== -1){
+                //     this.secondArr.push(items.id)
+                // }
+                if(flag){
                     this.secondArr.push(items.id)
                 }
                 this.ALLmoney += item.money
@@ -262,6 +268,7 @@ export default {
                 items.status = false
                 this.checkAll = false
                 this.threeArr.splice(this.threeArr.indexOf(item.id),1)
+                this.secondArr.splice(this.secondArr.indexOf(items.id),1)
                 let flag = true
                 items.goods.map(el => {
                     if(el.status){
@@ -269,9 +276,9 @@ export default {
                         return
                     }
                 })
-                if(flag) {
-                    this.secondArr.splice(this.secondArr.indexOf(items.id),1)
-                }
+                // if(flag) {
+                //     this.secondArr.splice(this.secondArr.indexOf(items.id),1)
+                // }
                 this.ALLmoney -= item.money
                 this.shopnum = this.threeArr.length 
             }     
@@ -281,7 +288,7 @@ export default {
                         statusnum++
                     }
                     // console.log(this.good_arr)
-                    console.log(statusnum)
+                    // console.log(statusnum)
                     if(this.good_arr.length == statusnum){
                         this.checkAll = true
                     } else {
@@ -318,6 +325,10 @@ export default {
                 }    
             }
             this.wicketcl = false
+            console.log(delid,id)
+        },
+        ceshi (s,d) {
+            console.log(s,d)
         }
     }
 }

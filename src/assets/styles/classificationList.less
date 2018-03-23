@@ -1,0 +1,217 @@
+@import "../public/public.less";
+@import "../public/theme.less";
+.classificationList {
+    .class-mian {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 36px 0 56px;
+        background: #f5f5f5;
+    }
+    .area {
+        width: 1260px;
+        margin: 0 auto;
+    }
+    //三级类目头部
+    .goodsclass {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        margin-top: 56px;
+        background-color: #f5f5f5;
+        .mar-right {
+            margin-right: 15px;
+        }
+        span {
+            cursor: pointer;
+        }
+        Icon {
+            color: #8898AB;
+        }
+    }
+    //物品选择
+    .goodschoose {
+        width: 100%;
+        font-size: 14px;
+        padding: 42px 0;
+        overflow: hidden;
+        .goodsch-conent {
+            width: 1260px;
+            margin: 0 auto;
+            .leimu {
+                width: 100%;
+                padding: 14px 0;
+                border-bottom: 1px solid #F0F0F0;
+                overflow: hidden;
+                .bpfl {
+                    float: left;
+                }
+                
+                .ml {
+                    margin-left: 28px;
+                }
+                .bp {
+                    width: 1000px;
+                    float: left;
+                    margin-left: 4px;
+                }
+                span {
+                    margin-right: 40px;
+                    cursor: pointer;
+                }
+                .gray {
+                    color: #8898AB;
+                    margin-right: 24px;
+                }
+                .po {
+                    float: right;
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+            }
+            .leimu:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    //选择价格
+    .price-choose {
+        width: 660px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        li {
+            float: left;
+            margin-right: 40px;
+            .px {
+                color: #8898AB;
+                margin-right: 40px;
+            }
+        }
+        .mdl {
+            margin-right: 20px;
+            color: #8898AB;
+        }
+        .price-updown {
+            width: 70px;
+            height: 32px;
+            line-height: 32px;
+            background-color: #fff;
+            position: relative;
+            cursor: pointer;
+            span {
+                margin-left: 10px;
+            }
+            .price-up {
+                position: absolute;
+                font-weight: 600;
+                top: 5px;
+                right: 10px;
+            }
+            .price-down {
+                position: absolute;
+                font-weight: 600;
+                bottom: 5px;
+                right: 10px;
+            }
+        }
+        .money-section {
+            width: 80px;
+            height: 32px;
+            background-color: #fff;
+            .greh {
+                color: #8898AB;
+                margin-left: 10px;
+            }
+            input {
+                width: 42px;
+                height: 20px;
+                margin-left: 6px;
+                border: 0;
+                color: #8898AB;
+            }
+        }
+        .make-sure {
+            width: 80px;
+            height: 32px;
+            text-align: center;
+            background-color: #8898AB;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    //商品
+    .goodslist {
+        width: 100%;
+        overflow: hidden;
+        .good-picture {
+            float: left;
+            margin: 0 20px 20px 0;
+            height: 354px;
+            width: 236px;
+            position: relative;
+            overflow: hidden;
+            img {
+              width: 100%;
+              display: block;
+            }
+            .good-title {
+              text-align: center;
+              background-color: #ffffff;
+              width: 236px;
+              height: 354px;
+              p {
+                font-size: 18px;
+                color: #364049;
+
+                padding-top: 18px;
+              }
+              .model {
+                font-size: 12px;
+                color: #788492;
+              }
+            }
+            .good-mask {
+              position: absolute;
+              left: 0;
+              bottom: -60px;
+              width: 236px;
+              height: 60px;
+              transition: 0.2s linear all;
+              background-color: #49cbcd;
+              cursor: pointer;
+              padding-left: 16px;
+
+              p {
+                font-size: 12px;
+                color: #ffffff;
+                padding-top: 10px;
+              }
+              span {
+                font-size: 12px;
+                color: #ffffff;
+                display: block;
+                margin-top: 8px;
+              }
+            }
+          }
+          .good-picture:nth-child(5n+0){
+                margin: 0;
+          }
+          .good-picture:hover {
+            .good-mask {
+              bottom: 0;
+            }
+            .model {
+              display: none;
+            }
+          }
+    }
+    //分页
+    .page-fy {
+        margin-left: 324px;
+    }
+    
+}

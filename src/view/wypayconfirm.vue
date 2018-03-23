@@ -11,13 +11,15 @@
 import Search from "../components/search"
 export default {
     components: {
-        Search
+        Search,
     },
     data () {
         return {
-            
         }
-    }    
+    },
+    methods: {
+
+    }   
 }
 </script>
 <style lang="less">
