@@ -6,12 +6,20 @@ import Regist from "../view/regist"; //注册页
 import Forgotpwd from "../view/forgotpwd.vue"; //忘记密码
 import Gooddetail from "../view/gooddetail.vue"; //商品详情页
 import Personal from "../view/personal.vue"; //个人中心
+import Myorder from "../view/myorder.vue"; //我的订单
+import Addressmanagement from "../view/addressmanagement.vue"; //地址管理
+import Personalinformation from "../view/personalinformation.vue"; //个人信息
 import ClassificationList from "../view/classificationList.vue"; //分类列表
 import Submitorder from "../view/submitorder.vue"; //确认订单
 import Shoppingcart from "../view/Shoppingcart.vue"; //购物车
 import Affirminist from "../view/affirminist.vue"; //选择支付方式
 import Paysuccess from "../view/paysuccess.vue"; //支付成功
 import Wypayconfirm from "../view/wypayconfirm.vue"; //网银支付确认
+import Building from "../view/building.vue"; //建材商品
+import Furniture from "../view/furniture.vue"; //家具商品
+import Brand from "../view/brand.vue"; //品牌活动
+import Store from "../view/store.vue"; //品牌店铺
+import Indent from "../view/indent.vue"; //订单详情
 
 Vue.use(Router);
 
@@ -45,7 +53,22 @@ export default new Router({
         {
             path: "/personal",
             component: Personal,
-            meta: { title: "个人中心" }
+            meta: { title: "个人中心" },
+            redirect: "/personal/myorder",
+            children: [
+                {
+                    path: "myorder",
+                    component: Myorder
+                },
+                {
+                    path: "addressmanagement",
+                    component: Addressmanagement
+                },
+                {
+                    path: "personalinformation",
+                    component: Personalinformation
+                }
+            ]
         },
         {
             path: "/classificationlist",
@@ -75,6 +98,31 @@ export default new Router({
             path: "/submitorder",
             component: Submitorder,
             meta: { title: "确认订单" }
+        },
+        {
+            path: "/building",
+            component: Building,
+            mate: { title: "建材商品" }
+        },
+        {
+            path: "/furniture",
+            component: Furniture,
+            mate: { title: "家具商品" }
+        },
+        {
+            path: "/brand",
+            component: Brand,
+            mate: { title: "商品活动" }
+        },
+        {
+            path: "/store",
+            component: Store,
+            mate: { title: "品牌店铺" }
+        },
+        {
+            path: "/indent",
+            component: Indent,
+            meta: { title: "订单详情" }
         }
     ]
 });

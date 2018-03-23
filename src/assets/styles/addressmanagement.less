@@ -1,0 +1,73 @@
+.addressmanagement {
+    margin-bottom: 402px;
+    padding-top: 58px;
+    .add {
+        button {
+            width: 120px;
+            height: 36px;
+            background: #49cbcd;
+            color: #fff;
+            outline: none;
+            border: none;
+            vertical-align: bottom;
+            margin-right: 10px;
+        }
+    }
+    .address-list {
+        margin-top: 20px;
+        font-size: 14px;
+        .thead {
+            background: #8998aa;
+            height: 50px;
+            overflow: hidden;
+            line-height: 50px;
+            color: #fff;
+            span {
+                float: left;
+                text-align: center;
+            }
+            .h-name {
+                width: 10%;
+            }
+            .h-adress {
+                width: 50%;
+            }
+            .h-tel {
+                width: 10%;
+            }
+            .h-edit {
+                width: 30%;
+            }
+        }
+        .item {
+            height: 40px;
+            overflow: hidden;
+            line-height: 40px;
+            span {
+                float: left;
+                text-align: center;
+            }
+            .name {
+                width: 10%;
+            }
+            .adress {
+                width: 50%;
+            }
+            .tel {
+                width: 10%;
+            }
+            .edit {
+                width: 30%;
+                .del {
+                    margin: 0 40px;
+                }
+            }
+        }
+        .item:nth-child(even) {
+            background: #e7eaee;
+        }
+        .item:nth-child(odd) {
+            background: #f5f5f5;
+        }
+    }
+}

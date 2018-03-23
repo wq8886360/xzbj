@@ -1,0 +1,202 @@
+@import "../public/public.less";
+@import "../public/theme.less";
+.brand {
+  //   全部商品分类
+  .banner {
+    .width-1260-center;
+    margin-top: 43.3px;
+    .banner-classify {
+      width: 240px;
+      height: 40px;
+      background-color: #49cbcd;
+      position: relative;
+      .ios-arrow-down {
+        font-size: 18px;
+        color: white;
+        padding-left: 50px;
+        line-height: 40px;
+      }
+      p.classify-title {
+        font-size: 16px;
+        color: #ffffff;
+        margin-left: 32px;
+      }
+      .banner-dropdown {
+        width: 240px;
+        height: 601px;
+        background-color: #485460;
+        z-index: 99;
+        position: absolute;
+        left: 0;
+        top: 39px;
+        display: none;
+        ul {
+          padding-top: 24px;
+          position: relative;
+          li {
+            font-size: 14px;
+            color: #ffffff;
+            width: 240px;
+            height: 40px;
+            padding-left: 32px;
+            .menu-content {
+              line-height: 40px;
+            }
+            .ios-arrow-right {
+              padding-left: 92px;
+              font-size: 18px;
+            }
+            .ios-right {
+              padding-left: 63px;
+              font-size: 18px;
+            }
+            .menu-list {
+              width: 1020px;
+              height: 601px;
+              box-sizing: border-box;
+              padding: 42px 42px 0 40px;
+              background: #fff;
+              position: absolute;
+              border: 1px solid #999;
+              border-left: none;
+              display: none;
+              left: 240px;
+              top: 0;
+              color: #364049;
+
+              .item {
+                margin-bottom: 40px;
+              }
+              .title {
+                padding-bottom: 16px;
+              }
+              .list {
+                overflow: hidden;
+                span {
+                  float: left;
+                  margin-right: 40px;
+                  margin-bottom: 4px;
+                }
+              }
+              span:hover {
+                color: @activeColor;
+              }
+            }
+          }
+          li:hover {
+            background: @activeColor;
+            .menu-list {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .banner-classify:hover {
+      .banner-dropdown {
+        display: block;
+      }
+    }
+
+    .menu {
+      position: relative;
+      ul {
+        overflow: hidden;
+        position: absolute;
+        left: 250px;
+        top: -32px;
+        cursor: pointer;
+        li {
+          float: left;
+          padding-left: 36px;
+          font-size: 16px;
+          color: #364049;
+        }
+        li:hover {
+          color: #49cbcd;
+        }
+      }
+    }
+  }
+  // 轮播图
+  .ivue-banner {
+    height: 600px;
+    .ivu-carousel-dots {
+      li {
+        button {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 5px;
+        }
+      }
+    }
+    .ivu-carousel-dots-inside {
+      bottom: 46px;
+    }
+  }
+  //   品牌商城
+  .heading {
+    .width-1260-center;
+    padding-top: 56px;
+    text-align: center;
+    h4 {
+      font-size: 32px;
+      color: #364049;
+      font-weight: bold;
+    }
+    h6 {
+      font-size: 16px;
+      color: #364049;
+      font-weight: normal;
+    }
+  }
+  .sign {
+    .width-1260-center;
+    margin-bottom: 56px;
+    .title {
+      font-size: 24px;
+      color: #364049;
+      margin-bottom: 20px;
+    }
+    .sign-brand {
+      overflow: hidden;
+      .item {
+        position: relative;
+        width: 180px;
+        height: 64px;
+        float: left;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        .item-mask {
+          width: 180px;
+          height: 64px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+          text-align: center;
+          background-color: rgba(73, 203, 205, 0.95);
+          .sign-store {
+            font-size: 16px;
+            color: #ffffff;
+            padding-top: 12px;
+            font-weight: bold;
+          }
+          .sign-major {
+            font-size: 12px;
+            color: #ffffff;
+          }
+        }
+      }
+      .item:hover {
+        .item-mask {
+          display: block;
+        }
+      }
+    }
+  }
+}
