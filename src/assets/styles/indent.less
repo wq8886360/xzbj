@@ -1,0 +1,183 @@
+.indent {
+    // 版心
+    .area {
+        width: 1260px;
+        margin: 0 auto;
+    }
+    // 通用颜色
+    .co {
+        color: #49CBCD;
+    }
+    .bg {
+        background-color: #49CBCD;
+    }
+    // 订单头部
+    .three-head {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background-color: #F5F5F5;
+        margin-top: 56px;
+        font-size: 16px;
+        color: #364049;
+        span {
+            cursor: pointer;
+        }
+        .iconfont {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+    }
+    // 订单状态
+    .state {
+        overflow: hidden;
+        .state-conent {
+            width: 808px;
+            height: 101px;
+            margin: 56px auto;
+            .state-head {
+                width: 100%;
+                height: 22px;
+                box-sizing: border-box;
+                padding: 0 18px;
+                overflow: hidden;
+                font-size: 16px;
+                color: #364049;
+                span {
+                    float: left;
+                    margin-right: 172px;
+                }
+                span:last-child {
+                    margin: 0;
+                }
+            }
+            .state-body {
+                width: 100%;
+                .plan {
+                    width: 743px;
+                    height: 32px;
+                    margin: 0 auto;
+                    margin-top: 18px;
+                    overflow: hidden;
+                    position: relative;
+                    .plan-all {
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        border: 2px solid #8898AB; 
+                        position: relative;
+                        .plan-green {
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;;
+                            top: 50%;
+                            margin-top: -8px;
+                            left: 50%;
+                            margin-left: -8px;
+                            background-color: #49CBCD;
+                            border-radius: 50%;
+                        }
+                    }
+                    .plan-first {
+                        float: left;
+                    }
+                    .plan-second {
+                        float: left;
+                        margin-left: 204px;
+                    }
+                    .plan-three {
+                        float: left;
+                        margin-left: 204px;
+                    }
+                    .plan-line {
+                        width: 204px;
+                        height: 2px;
+                        background-color: #8898AB;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -1px;
+                        left: 32px;
+                    }
+                    .line-second {
+                        margin-left: 236px;
+                    }
+                    .line-three {
+                        left: 504px;
+                    }
+                }
+            }
+            .state-foot {
+                width: 100%;
+                height: 17px;
+                margin-top: 12px;
+                font-size: 12px;
+                color: #8898AB;
+                span {
+                    margin-right: 140px;
+                }
+                span:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    // 订单信息
+    .message {
+        width: 100%;
+        padding: 56px 0;
+        background-color: #F5F5F5;
+        overflow: hidden;
+        color: #485460;
+        .mes-title {
+            font-size: 18px;
+            font-weight: 600;
+            float: left;
+            color: #364049;
+        }
+        .mes-img {
+            float: left;
+            margin-left: 107px;
+            overflow: hidden;
+            img {
+                float: left;
+            }
+            .mesimg-p {
+                float: left;
+                margin-left: 40px;
+                margin-top: 10px;
+                p {
+                    font-size: 14px;
+                    margin-bottom: 6px;
+                }
+                p:first-child {
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #364049;
+                }
+            }
+        }
+        .mes-xx {
+            float: left;
+            margin-left: 190px;
+            font-size: 14px;
+            p {
+                margin-bottom: 10px;
+            }
+            .mes-ddbh {
+                margin-right: 54px;
+            }
+            .mes-shr {
+                margin-right: 109px;
+            }
+        }
+    }
+    //物流信息
+    .logistics {
+        padding: 56px;
+        overflow: hidden;
+        h3 {
+            font-size: 18px;
+            color: #364049;
+        }
+    }
+}
