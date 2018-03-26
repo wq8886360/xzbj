@@ -21,10 +21,11 @@
                     <div class="bp">
                         <span class="green">全部</span>
                         <span class="green" v-for="(item,index) in 10" :key="index">明杰家具</span>
-                    </div>            
-                    <Icon type="ios-arrow-down po"></Icon>
-                    <!-- <Icon type="ios-arrow-up po"></Icon> -->
-
+                    </div>
+                    <div class="down-up" @click="updown">
+                        <Icon type="ios-arrow-down" v-if="down"></Icon>
+                        <Icon type="ios-arrow-up" v-if="up"></Icon>
+                    </div>          
                 </div>
                 <div class="leimu">
                     <span class="ml gray">风格：</span>
@@ -108,7 +109,21 @@ export default {
         Page
     },
     data() {
-        return {};
+        return {
+            down:true,
+            up:false,
+        };
+    },
+    methods: {
+        updown () {
+            if(this.down){
+                this.down = false
+                this.up = true
+            }else{
+                this.down = true
+                this.up = false
+            }
+        }
     }
 };
 </script>

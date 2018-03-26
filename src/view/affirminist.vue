@@ -59,24 +59,24 @@
             </div>
             <div class="bankclassify" v-if="bankify" @mouseenter="wy = false" @mouseleave="wy = true">
                 <ul>
-                    <li @mouseenter="urcb_N = false" @mouseleave="urcb_N = true">
-                        <img src="../assets/img/urcb_H.png">
+                    <li @mouseenter="urcb_N = false,urcb_F = true" @mouseleave="urcb_N = true,urcb_F = false">
+                        <img src="../assets/img/urcb_H.png" v-if="urcb_F">
                         <img src="../assets/img/urcb_N.png" v-if="urcb_N">
                     </li>
-                    <li @mouseenter="abc_N = false" @mouseleave="abc_N = true">
-                        <img src="../assets/img/abc_H.png">
+                    <li @mouseenter="abc_N = false,abc_F = true" @mouseleave="abc_N = true,abc_F = false">
+                        <img src="../assets/img/abc_H.png" v-if="abc_F">
                         <img src="../assets/img/abc_N.png" v-if="abc_N">
                     </li>
-                    <li @mouseenter="icbc_N = false" @mouseleave="icbc_N = true">
-                        <img src="../assets/img/icbc_H.png">
+                    <li @mouseenter="icbc_N = false,icbc_F = true" @mouseleave="icbc_N = true,icbc_F = false">
+                        <img src="../assets/img/icbc_H.png" v-if="icbc_F">
                         <img src="../assets/img/icbc_N.png" v-if="icbc_N">
                     </li>
-                    <li @mouseenter="boc_N = false" @mouseleave="boc_N = true">
-                        <img src="../assets/img/boc_H.png">
+                    <li @mouseenter="boc_N = false,boc_F = true" @mouseleave="boc_N = true,boc_F = false">
+                        <img src="../assets/img/boc_H.png" v-if="boc_F">
                         <img src="../assets/img/boc_N.png" v-if="boc_N">
                     </li>
-                    <li @mouseenter="cmbc_N = false" @mouseleave="cmbc_N = true">
-                        <img src="../assets/img/cmbc_H.png">
+                    <li @mouseenter="cmbc_N = false,cmbc_F = true" @mouseleave="cmbc_N = true,cmbc_F = false">
+                        <img src="../assets/img/cmbc_H.png" v-if="cmbc_F">
                         <img src="../assets/img/cmbc_N.png" v-if="cmbc_N">
                     </li>
                 </ul>
@@ -118,10 +118,15 @@ export default {
             wy:true,
             bankify:false,
             urcb_N:true,
+            urcb_F:false,
             abc_N:true,
+            abc_F:false,
             icbc_N:true,
+            icbc_F:false,
             boc_N:true,
+            boc_F:false,
             cmbc_N:true,
+            cmbc_F:false,
             wicketcl:false,     //删除弹窗
             bankdown:true,
             bankup:false,

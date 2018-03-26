@@ -54,11 +54,9 @@
                                     <li>24.00</li>
                                     <li>5</li>
                                     <li @click="ceshi(item.id,items.id)">¥100.00</li>
-                                    <li><span @click="wicketcl = true">删除</span></li>
+                                    <li><span @click="del(item.id,items.id)">删除</span></li>
                                 </ul>
                             </div>
-                            <!-- 删除弹框 -->
-                            <Modal :content="qxmsg" :visible.sync="wicketcl" @determine="qdscdel(item.id,items.id)"></Modal>
                             <!-- <div class="wicket-bg" v-if="wicketcl">
                                 <div class="delzezel">
                                     <div class="wicket-head">
@@ -78,6 +76,8 @@
                         </div>
                     </div>         
                 </div>
+                <!-- 删除弹框 -->
+                <Modal :content="qxmsg" :visible.sync="wicketcl" @determine="qdscdel(itemid,itemsid)"></Modal>
                 <!-- 底部合计 -->
                 <div class="mer-foot">
                     <div class="mer-total">
@@ -118,6 +118,8 @@ export default {
             ALLmoney:0.00,     //结算的钱
             shopnum:0,         // 选择商品件数
             qxmsg:"确认要删除该商品？",
+            itemid:null,
+            itemsid:null,
             good_arr: [
                 {
                     name: "商店1",
@@ -303,9 +305,11 @@ export default {
         delALL () {
             // 到时候把当前的this.threeArr给后台
         },
-        // 删除弹框
-        delbezel () {
+        // 删除
+        del (itemid,itemsid) {
             this.wicketcl = true
+            this.itemid = itemid
+            this.itemsid = itemsid
         },
         // 删除选项
         qdscdel (delid, id) {
@@ -326,9 +330,6 @@ export default {
             }
             this.wicketcl = false
             console.log(delid,id)
-        },
-        ceshi (s,d) {
-            console.log(s,d)
         }
     }
 }

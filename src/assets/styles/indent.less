@@ -174,10 +174,182 @@
     //物流信息
     .logistics {
         padding: 56px;
+        font-size: 14px;
+        color: #485460;
         overflow: hidden;
         h3 {
+            float: left;
             font-size: 18px;
             color: #364049;
+        }
+        .logtime {
+            margin-left: 107px;
+            float: left;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+        .logcontent {
+            float: left;
+            margin-left: 245px;
+            .logbottom {
+                margin-bottom: 10px;
+            }
+            .logtail {
+                overflow: hidden;
+                span {
+                    float: left;
+                }
+                .logcont {
+                    float: right;
+                    .stage {
+                        margin-bottom: 10px;
+                        .logcont-time {
+                            padding-left: 5px;
+                        }
+                    }  
+                }
+            }
+        }
+    }
+    // 物品清单
+    .inventory {
+        font-size: 14px;
+        overflow: hidden;
+        margin-bottom: 56px;
+        .inven-head {
+            overflow: hidden;
+            h3 {
+                float: left;
+                font-size: 18px;
+                color: #364049;
+            }
+            .inven-title {
+                float: right;
+                color: #364049;
+                width: 1080px;
+                height: 50px;
+                background-color: #F5F5F5;
+                line-height: 50px;
+                overflow: hidden;
+                span {
+                    float: left;
+                }
+                span:first-child {
+                    margin-left: 144px;
+                }
+                span:nth-child(2) {
+                    margin-left: 209px;
+                }
+                span:nth-child(3) {
+                    margin-left: 100px;
+                }
+                span:nth-child(4) {
+                    margin-left: 147px;
+                }
+                span:nth-child(5) {
+                    margin-left: 54px;
+                }
+                span:nth-child(6) {
+                    margin-left: 87px;
+                }
+            }
+        }
+        // 商品清单详情
+        .invencont {
+            width: 1080px;
+            margin-top: 20px;
+            float: right;    
+            border-width: 1px;
+            border-style: solid;
+            border-color: #f5f5f5;
+            border-left: 0;
+            .inven-head {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                background-color: #8898AB;
+                overflow: hidden;
+                color: #fff;
+                span {
+                    float: left;
+                }
+                span:first-child {
+                    margin-left: 20px;
+                }
+                span:nth-child(2) {
+                    margin-left: 100px;
+                }
+                span:nth-child(3) {
+                    margin-left: 80px;
+                }
+            }
+            .inven-body {
+                position: relative;
+                .invenbody-left {
+                    float: left;
+                    width: 667px;
+                    height: 140px;
+                    box-sizing: border-box;
+                    padding: 20px;
+                    overflow: hidden;
+                    color: #485460;
+                    background:rgba(136,152,171,0.2);
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        float: left;
+                    }
+                    .describe {
+                        width: 160px;
+                        float: left;
+                        margin-left: 16px;
+                        padding-top: 20px;
+                        p {
+                            margin-bottom: 2px;
+                            overflow: hidden;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            word-break: break-all;
+                        }
+                    }
+                    .invenmoney {
+                        float: left;
+                        margin-left: 92px;
+                        line-height: 100px;
+                    }
+                    .invennum {
+                        float: left;
+                        margin-left: 117px;
+                        line-height: 100px;
+                    }
+                }
+                .invenbody-left:nth-child(2n){
+                    background-color: #F5F5F5;
+                }
+                .invenbody-right {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 412px;
+                    height: 140px;
+                    overflow: hidden;
+                    .invenright-money {
+                        float: left;
+                        margin-top: 42px;
+                        margin-left: 48px;
+                        p:first-child {
+                            color: #FC6532;
+                        }
+                    }
+                    .dealstate {
+                        float: left;
+                        margin-left: 54px;
+                        margin-top: 50px;
+                    }
+                }
+            }
         }
     }
 }
