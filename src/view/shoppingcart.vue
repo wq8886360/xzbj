@@ -83,12 +83,12 @@
                     <div class="mer-total">
                         <div class="coding">
                             <span>推荐销售人员编码（选填）：</span>
-                            <input type="text" v-model="tjcode">
+                            <Input v-model="tjcode" class="input"></Input>
                         </div>
                         <div class="mer-money">
                             <p>已选商品 <span>{{shopnum}}</span> 件，合计 </p> <span class="fontbig">¥ {{ALLmoney}}</span>
                         </div>
-                        <div class="close" @click="jsclose">提交订单</div>
+                        <div class="close" @click="jsclose">结算</div>
                     </div>
                 </div>
             </div>
@@ -96,12 +96,13 @@
     </div>
 </template>
 <script>
-import { Icon , CheckboxGroup ,Checkbox } from "iview";
+import { Icon , CheckboxGroup ,Checkbox,Input } from "iview";
 import Search from "../components/search"
 import Modal from "../components/modal"
 export default {
     components:{
         Icon,
+        Input,
         CheckboxGroup,
         Checkbox,
         Search, //搜索框

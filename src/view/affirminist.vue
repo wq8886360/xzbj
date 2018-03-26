@@ -39,18 +39,18 @@
                 </div>
             </div>
             <!-- 支付类型 -->
-            <div class="pay-type" @mouseenter="zfb = false" @mouseleave="zfb = true">
-                <img src="../assets/img/alipay_H.png">
+            <div class="pay-type" @mouseenter="zfb = false,zfbf = true" @mouseleave="zfb = true,zfbf = false">
+                <img src="../assets/img/alipay_H.png" v-if="zfbf">
                 <img src="../assets/img/alipay_N.png" v-if="zfb">
                 <span>支付宝支付</span>
             </div>
-            <div class="pay-type" @mouseenter="wx = false" @mouseleave="wx = true">
-                <img src="../assets/img/WeChat_H.png" >
+            <div class="pay-type" @mouseenter="wx = false,wxf = true" @mouseleave="wx = true,wxf = false">
+                <img src="../assets/img/WeChat_H.png" v-if="wxf">
                 <img src="../assets/img/WeChat_N.png" v-if="wx">
                 <span>微信支付</span>
             </div>
-            <div class="pay-type mar-bott" @mouseenter="wy = false" @mouseleave="wy = true" @click="bankifyclick">
-                <img src="../assets/img/bank_H.png" >
+            <div class="pay-type mar-bott" @mouseenter="wy = false,wyf = true" @mouseleave="wy = true,wyf = false" @click="bankifyclick">
+                <img src="../assets/img/bank_H.png" v-if="wyf">
                 <img src="../assets/img/bank_N.png" v-if="wy">
                 <span>网银支付</span>
                 <!-- <img src="../assets/img/pullDown_nor.png" class="pulldown"> -->
@@ -114,7 +114,10 @@ export default {
     data () {
         return {
             zfb:true,
+            zfbf:false,
+            wxf:false,
             wx:true,
+            wyf:false,
             wy:true,
             bankify:false,
             urcb_N:true,

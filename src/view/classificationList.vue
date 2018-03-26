@@ -22,10 +22,13 @@
                         <span class="green">全部</span>
                         <span class="green" v-for="(item,index) in 10" :key="index">明杰家具</span>
                     </div>
+                    <div class="bp dz" v-if="up">
+                        <span class="green" v-for="(item,index) in 10" :key="index">明杰家具</span>
+                    </div>
                     <div class="down-up" @click="updown">
                         <Icon type="ios-arrow-down" v-if="down"></Icon>
                         <Icon type="ios-arrow-up" v-if="up"></Icon>
-                    </div>          
+                    </div>
                 </div>
                 <div class="leimu">
                     <span class="ml gray">风格：</span>
@@ -62,14 +65,15 @@
                         </li>
                         <li class="money-section mdl">
                             <Icon type="social-yen" class="greh"></Icon>
-                            <input type="text">
+                            <!-- <input type="text"> -->
+                            <Input class="input"></Input>
                         </li>
                         <li class="mdl">
                             <span>—</span>
                         </li>
-                        <li class="money-section">
+                        <li class="money-section mdl">
                             <Icon type="social-yen" class="greh"></Icon>
-                            <input type="text">
+                            <Input class="input"></Input>
                         </li>
                         <li class="make-sure">
                             确定
@@ -101,12 +105,13 @@
 </template>
 <script>
 import Search from "../components/search.vue";
-import {Icon,Page} from "iview"
+import {Icon,Page,Input} from "iview"
 export default {
     components: {
         Search,
         Icon,
-        Page
+        Page,
+        Input
     },
     data() {
         return {
