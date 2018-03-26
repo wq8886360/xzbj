@@ -18,7 +18,7 @@
                         <span>2</span>
                     </div>
                     <div class="plan-line line-second"></div>
-                    <div class="plan-all plan-three">
+                    <div class="plan-all plan-three plancolor">
                         <span>3</span>
                     </div>
                 </div>

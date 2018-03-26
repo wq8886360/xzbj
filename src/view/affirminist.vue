@@ -11,16 +11,16 @@
                     <span>完成订单</span>
                 </div>
                 <div class="plan">
-                    <div class="plan-all plan-first">
-                        <div class="plan-green"></div>
+                    <div class="plan-all plan-first plancolor">
+                        <span>1</span>
                     </div>
                     <div class="plan-line"></div>
                     <div class="plan-all plan-second">
-                        <div class="plan-green"></div>
+                        <span>2</span>
                     </div>
                     <div class="plan-line line-second"></div>
                     <div class="plan-all plan-three">
-                        <!-- <div class="plan-green"></div> -->
+                        <span>3</span>
                     </div>
                 </div>
             </div>

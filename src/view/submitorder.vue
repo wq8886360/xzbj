@@ -13,7 +13,7 @@
                     <span>1</span>
                 </div>
                 <div class="plan-line"></div>
-                <div class="plan-all plan-second">
+                <div class="plan-all plan-second plancolor">
                     <span>2</span>
                 </div>
                 <div class="plan-line line-second"></div>
