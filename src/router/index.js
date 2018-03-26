@@ -20,6 +20,7 @@ import Furniture from "../view/furniture.vue"; //家具商品
 import Brand from "../view/brand.vue"; //品牌活动
 import Store from "../view/store.vue"; //品牌店铺
 import Indent from "../view/indent.vue"; //订单详情
+import Agreement from "../view/agreement.vue"; //用户协议
 
 import Test from "../view/test.vue"; //测试页面
 
@@ -130,6 +131,11 @@ export default new Router({
             path: "/indent",
             component: Indent,
             meta: { title: "订单详情" }
+        },
+        {
+            path: "/agreement",
+            component: Agreement,
+            meta: { title: "用户协议" }
         }
     ]
 });
