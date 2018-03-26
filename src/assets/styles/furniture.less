@@ -118,10 +118,9 @@
       }
     }
   }
-  //轮播图
+  // 轮播图
   .ivue-banner {
     height: 600px;
-    margin-bottom: 56px;
     .ivu-carousel-dots {
       li {
         button {
@@ -129,6 +128,11 @@
           height: 10px;
           border-radius: 50%;
           margin: 0 5px;
+        }
+      }
+      .ivu-carousel-active {
+        button {
+          background-color: @activeColor;
         }
       }
     }
