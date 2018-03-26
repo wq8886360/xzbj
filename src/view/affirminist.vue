@@ -39,18 +39,18 @@
                 </div>
             </div>
             <!-- 支付类型 -->
-            <div class="pay-type" @mouseenter="zfb = false" @mouseleave="zfb = true">
-                <img src="../assets/img/alipay_H.png">
+            <div class="pay-type" @mouseenter="zfb = false,zfbf = true" @mouseleave="zfb = true,zfbf = false">
+                <img src="../assets/img/alipay_H.png" v-if="zfbf">
                 <img src="../assets/img/alipay_N.png" v-if="zfb">
                 <span>支付宝支付</span>
             </div>
-            <div class="pay-type" @mouseenter="wx = false" @mouseleave="wx = true">
-                <img src="../assets/img/WeChat_H.png" >
+            <div class="pay-type" @mouseenter="wx = false,wxf = true" @mouseleave="wx = true,wxf = false">
+                <img src="../assets/img/WeChat_H.png" v-if="wxf">
                 <img src="../assets/img/WeChat_N.png" v-if="wx">
                 <span>微信支付</span>
             </div>
-            <div class="pay-type mar-bott" @mouseenter="wy = false" @mouseleave="wy = true" @click="bankifyclick">
-                <img src="../assets/img/bank_H.png" >
+            <div class="pay-type mar-bott" @mouseenter="wy = false,wyf = true" @mouseleave="wy = true,wyf = false" @click="bankifyclick">
+                <img src="../assets/img/bank_H.png" v-if="wyf">
                 <img src="../assets/img/bank_N.png" v-if="wy">
                 <span>网银支付</span>
                 <!-- <img src="../assets/img/pullDown_nor.png" class="pulldown"> -->
@@ -59,24 +59,24 @@
             </div>
             <div class="bankclassify" v-if="bankify" @mouseenter="wy = false" @mouseleave="wy = true">
                 <ul>
-                    <li @mouseenter="urcb_N = false" @mouseleave="urcb_N = true">
-                        <img src="../assets/img/urcb_H.png">
+                    <li @mouseenter="urcb_N = false,urcb_F = true" @mouseleave="urcb_N = true,urcb_F = false">
+                        <img src="../assets/img/urcb_H.png" v-if="urcb_F">
                         <img src="../assets/img/urcb_N.png" v-if="urcb_N">
                     </li>
-                    <li @mouseenter="abc_N = false" @mouseleave="abc_N = true">
-                        <img src="../assets/img/abc_H.png">
+                    <li @mouseenter="abc_N = false,abc_F = true" @mouseleave="abc_N = true,abc_F = false">
+                        <img src="../assets/img/abc_H.png" v-if="abc_F">
                         <img src="../assets/img/abc_N.png" v-if="abc_N">
                     </li>
-                    <li @mouseenter="icbc_N = false" @mouseleave="icbc_N = true">
-                        <img src="../assets/img/icbc_H.png">
+                    <li @mouseenter="icbc_N = false,icbc_F = true" @mouseleave="icbc_N = true,icbc_F = false">
+                        <img src="../assets/img/icbc_H.png" v-if="icbc_F">
                         <img src="../assets/img/icbc_N.png" v-if="icbc_N">
                     </li>
-                    <li @mouseenter="boc_N = false" @mouseleave="boc_N = true">
-                        <img src="../assets/img/boc_H.png">
+                    <li @mouseenter="boc_N = false,boc_F = true" @mouseleave="boc_N = true,boc_F = false">
+                        <img src="../assets/img/boc_H.png" v-if="boc_F">
                         <img src="../assets/img/boc_N.png" v-if="boc_N">
                     </li>
-                    <li @mouseenter="cmbc_N = false" @mouseleave="cmbc_N = true">
-                        <img src="../assets/img/cmbc_H.png">
+                    <li @mouseenter="cmbc_N = false,cmbc_F = true" @mouseleave="cmbc_N = true,cmbc_F = false">
+                        <img src="../assets/img/cmbc_H.png" v-if="cmbc_F">
                         <img src="../assets/img/cmbc_N.png" v-if="cmbc_N">
                     </li>
                 </ul>
@@ -114,14 +114,22 @@ export default {
     data () {
         return {
             zfb:true,
+            zfbf:false,
+            wxf:false,
             wx:true,
+            wyf:false,
             wy:true,
             bankify:false,
             urcb_N:true,
+            urcb_F:false,
             abc_N:true,
+            abc_F:false,
             icbc_N:true,
+            icbc_F:false,
             boc_N:true,
+            boc_F:false,
             cmbc_N:true,
+            cmbc_F:false,
             wicketcl:false,     //删除弹窗
             bankdown:true,
             bankup:false,
