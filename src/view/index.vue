@@ -25,7 +25,7 @@
                             </div>
                             <div class="menu-list">
                                 <div class="item">
-                                    
+
                                 </div>
                             </div>
                         </li>
@@ -53,15 +53,15 @@
                     <li>建材商品</li>
                     <li>家居商品</li>
                     <li>品牌活动</li>
-                    <li>整包方案</li>
-                    <li>户型</li>
+                    <li @click="modelShow=true">整包方案</li>
+                    <li @click="modelShow=true">户型</li>
                 </ul>
             </div>
         </div>
         <div class="effective" v-if="true">
             <!-- 轮播图 -->
             <div class="ivue-banner">
-                <Carousel autoplay arrow="never">
+                <Carousel autoplay v-model="value1" arrow="never" loop>
                     <Carousel-item>
                         <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
                     </Carousel-item>
@@ -167,18 +167,25 @@
                 </div>
             </div>
         </div>
+        <model :visible.sync="modelShow" content="浏览VR户型需要下载客户端"></model>
+
     </div>
 </template>
 <script>
 import { Icon, Carousel, CarouselItem } from "iview";
+import Model from "../components/modal.vue";
 export default {
     components: {
         Icon,
         Carousel,
-        CarouselItem
+        CarouselItem,
+        Model
     },
     data() {
-        return {};
+        return {
+            value1: 0,
+            modelShow: false
+        };
     }
 };
 </script>
