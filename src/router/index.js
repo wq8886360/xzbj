@@ -21,12 +21,19 @@ import Brand from "../view/brand.vue"; //品牌活动
 import Store from "../view/store.vue"; //品牌店铺
 import Indent from "../view/indent.vue"; //订单详情
 
+import Test from "../view/test.vue"; //测试页面
+
 Vue.use(Router);
 
 export default new Router({
     routes: [
         {
             path: "/",
+            component: Test,
+            meta: { title: "测试页", footShow: false, headerShow: false }
+        },
+        {
+            path: "/index",
             component: Index,
             meta: { title: "首页" }
         },
@@ -97,7 +104,7 @@ export default new Router({
         {
             path: "/submitorder",
             component: Submitorder,
-            meta: { title: "确认订单" }
+            meta: { title: "订单结算" }
         },
         {
             path: "/building",
