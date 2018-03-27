@@ -25,6 +25,9 @@
                             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                         </Select>
                     </FormItem>
+                    <FormItem label="详细地址:">
+                        <Input v-model="formItem.textarea" type="textarea" :autosize="{minRows: 3,maxRows: 3}" placeholder="详细地址，长度为5～50字" />
+                    </FormItem>
                 </Form>
             </div>
             <div class="btn">
@@ -45,6 +48,9 @@ export default {
         Select,
         Option
     },
+    watch: {
+        a() {}
+    },
     data() {
         return {
             formItem: {
@@ -52,7 +58,8 @@ export default {
                 tel: "",
                 province: "", //省
                 city: "", //市
-                area: "" //区
+                area: "", //区
+                textarea: "" //详细地址
             },
             cityList: [
                 {
@@ -120,6 +127,7 @@ export default {
     width: 100vw;
     height: 100vh;
     position: fixed;
+    overflow: hidden;
     top: 0;
     left: 0;
     z-index: 100;
