@@ -52,7 +52,7 @@
         </div>
         <!-- 轮播图 -->
         <div class="ivue-banner">
-            <Carousel autoplay arrow="never">
+            <Carousel autoplay v-model="value1" arrow="never" loop>
                 <Carousel-item>
                     <div class="demo-carousel"><img src="../assets/img/banner.jpg" alt=""></div>
                 </Carousel-item>
@@ -103,7 +103,9 @@ export default {
         Search
     },
     data() {
-        return {};
+        return {
+            value1: 0
+        };
     }
 };
 </script>

@@ -25,44 +25,53 @@
             overflow: hidden;
             position: relative;
             .plan-all {
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                border: 2px solid #8898AB; 
-                position: relative;
-                .plan-green {
-                    width: 16px;
-                    height: 16px;
-                    position: absolute;;
-                    top: 50%;
-                    margin-top: -8px;
-                    left: 50%;
-                    margin-left: -8px;
-                    background-color: #49CBCD;
-                    border-radius: 50%;
+                width: 26px;
+                height: 26px;
+                text-align: center;
+                border-radius: 50%; 
+                border: 1px solid #ccc;       
+                span {
+                    color: #ccc;
+                    line-height: 26px;
                 }
+            }
+            .plan-all:first-child {
+                background-color: #49cbcd;  
             }
             .plan-first {
                 float: left;
+                span {
+                    color: #fff;
+                }    
             }
             .plan-second {
                 float: left;
-                margin-left: 204px;
+                margin-left: 212px;
             }
             .plan-three {
-                float: right;
+                float: left;
+                margin-left: 212px;
             }
             .plan-line {
-                width: 204px;
-                height: 2px;
-                background-color: #8898AB;
+                width: 190px;
+                height: 1px;
+                background-color: #e9eaec;
                 position: absolute;
-                top: 50%;
-                margin-top: -1px;
-                left: 32px;
+                top: 45%;
+                left: 36px;
             }
             .line-second {
-                margin-left: 236px;
+                margin-left: 240px;
+            }
+            .line-three {
+                left: 514px;
+            }
+            // 添加样式类
+            .plancolor {
+                background-color: #49cbcd;
+                span {
+                   color: #fff !important; 
+                }   
             }
         }
     }
@@ -280,13 +289,15 @@
                     span {
                         color: #8898AB;
                     }
-                    input {
+                    .input {
                         width: 400px;
                         height: 36px;
                         color: #8898AB;
                         padding-left: 10px;
-                        background:rgba(0,0,0,0);
-                        border: 1px solid #788492;
+                        .ivu-input {
+                            background: rgba(0, 0, 0, 0);
+                            border: 1px solid #788492;
+                        }
                     }
                     .dphj {
                         color: #485460;

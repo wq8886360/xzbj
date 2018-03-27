@@ -10,15 +10,15 @@
             </div>
             <div class="plan">
                 <div class="plan-all plan-first">
-                    <div class="plan-green"></div>
+                    <span>1</span>
                 </div>
                 <div class="plan-line"></div>
-                <div class="plan-all plan-second">
-                    <!-- <div class="plan-green"></div> -->
+                <div class="plan-all plan-second plancolor">
+                    <span>2</span>
                 </div>
                 <div class="plan-line line-second"></div>
                 <div class="plan-all plan-three">
-                    <!-- <div class="plan-green"></div> -->
+                    <span>3</span>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
                     <div class="mer-body remark">
                         <div class="remark-content">
                             <span>备注：</span>
-                            <input type="text" placeholder="字数不超过20字">
+                            <Input placeholder="字数不超过20字" class="input"></Input>
                             <span class="dphj">店铺合计：</span>
                             <span class="hj-mo">¥ 240.00</span>
                         </div>
@@ -105,12 +105,13 @@
     </div>
 </template>
 <script>
-import { Icon } from "iview";
+import { Icon,Input } from "iview";
 import Search from "../components/search.vue";
 import Modal from "../components/modal";
 export default {
     components: {
         Search,
+        Input,
         Icon,
         Modal   //删除弹框
     },
