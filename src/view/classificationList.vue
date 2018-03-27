@@ -10,7 +10,11 @@
                 <Icon type="ios-arrow-right" class="mar-right"></Icon>
                 <span class="mar-right">成套家具</span>
                 <Icon type="ios-arrow-right" class="mar-right"></Icon>
-                <span>客厅成套家具</span>
+                <span class="mar-right">客厅成套家具</span>
+                <Icon type="ios-arrow-right" class="mar-right"></Icon>
+                <div class="lsdel">朋节家具
+                    <Icon type="ios-close-empty" class="ll"></Icon>
+                </div>
             </div>
         </div>
         <!-- 物品选择 -->
