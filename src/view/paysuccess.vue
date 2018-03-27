@@ -45,7 +45,7 @@ export default {
     },
     data () {
         return {
-            current:1,   //进度条
+            current:3,   //进度条
         }
     }    
 }
