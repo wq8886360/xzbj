@@ -17,6 +17,7 @@
         <Button type="primary" @click.native="goto('/furniture')">家居商品页</Button>
         <Button type="primary" @click.native="goto('/brand')">品牌活动页</Button>
         <Button type="primary" @click.native="goto('/store')">品牌店铺页</Button>
+        
     </div>
 </template>
 <script>

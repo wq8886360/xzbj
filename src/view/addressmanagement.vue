@@ -1,7 +1,7 @@
 <template>
     <div class="addressmanagement">
         <div class="add">
-            <button>新增收货地址</button>
+            <button @click="addAdress">新增收货地址</button>
             <span>（已添加2条，最多可添加10条）</span>
         </div>
         <div class="address-list">
@@ -33,8 +33,13 @@ export default {
     },
     data() {
         return {
-            state: true
+            state: false
         };
+    },
+    methods: {
+        addAdress() {
+            this.state = true;
+        }
     }
 };
 </script>
