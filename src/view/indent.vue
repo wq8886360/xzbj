@@ -15,29 +15,13 @@
         </div>
         <!-- 订单状态 -->
         <div class="state area">
-            <div class="state-conent">
-                <div class="state-head">
-                    <span>提交订单</span>
-                    <span>买家支付</span>
-                    <span>商家发货</span>
-                    <span>确认收货</span>
-                </div>
-                <div class="state-body">
-                    <div class="plan">
-                        <Steps :current="current" class="plan-steps">
-                            <Step class="plan-first" style="width : 240px"></Step>
-                            <Step style="width : 236px"></Step>
-                            <Step style="width : 236px"></Step>
-                            <Step style="width : 30px"></Step>
-                        </Steps>
-                    </div>
-                </div>
-                <div class="state-foot">
-                    <span>2018.01.22  12:30</span>
-                    <span>2018.01.22  12:30</span>
-                    <span>2018.01.22  12:30</span>
-                    <span>2018.01.22  12:30</span>
-                </div>
+            <div class="plan">
+                <Steps :current="current">
+                    <Step title="提交订单" content="2018.01.22  12:30"></Step>
+                    <Step title="买家支付" content="2018.01.22  12:30"></Step>
+                    <Step title="商家发货" content="2018.01.22  12:30"></Step>
+                    <Step title="确认收货" content="2018.01.22  12:30" style="width : 160px"></Step>
+                </Steps>
             </div>
         </div>
         <!-- 订单信息 -->

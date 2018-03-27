@@ -4,18 +4,13 @@
             <Search></Search>
             <!-- 状态显示栏 -->
             <div class="state">
-                <div class="state-head">
-                    <span>提交订单</span>
-                    <span>支付</span>
-                    <span>完成订单</span>
-                </div>
                 <div class="plan">
-                    <Steps :current="current" class="plan-steps">
-                        <Step class="plan-first" style="width : 240px"></Step>
-                        <Step style="width : 236px"></Step>
-                        <Step style="width : 30px"></Step>
+                    <Steps :current="current">
+                        <Step title="提交订单"></Step>
+                        <Step title="支付"></Step>
+                        <Step title="完成订单" style="width : 100px"></Step>
                     </Steps>
-                </div> 
+                </div>  
             </div>
             <!-- 支付成功内容 -->
             <div class="suconent">
@@ -50,7 +45,7 @@ export default {
     },
     data () {
         return {
-            current:1,   //进度条
+            current:3,   //进度条
         }
     }    
 }
