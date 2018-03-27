@@ -88,7 +88,7 @@
                 <div class="mer-money">
                     <p>共<span>{{shopnum}}</span>件商品，总计（含运费） </p> <span class="fontbig">¥ {{ALLmoney}}</span>
                 </div>
-                <div class="close" @click="jsclose">提交订单</div>
+                <div class="close" @click="jsclose">结算</div>
             </div>
         </div>
     </div>
