@@ -3,7 +3,7 @@
         <search/>
         <div class="goodtail-head">
             <div class="goodtail-title">
-                <Breadcrumb>
+                <Breadcrumb separator=">">
                     <Breadcrumb-item href="/">首页</Breadcrumb-item>
                     <Breadcrumb-item href="/components/breadcrumb">家居</Breadcrumb-item>
                     <Breadcrumb-item>沙发</Breadcrumb-item>
@@ -23,6 +23,7 @@
                     </div>
 
                     <p class="telephone">
+                        <span>暂不支持退款／退货</span><br>
                         售后联系电话：13866668888
                     </p>
                 </div>
@@ -58,9 +59,7 @@
                                 <Select v-model="model2" style="width:120px;height: 32px;">
                                     <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                                 </Select>
-                                <Select v-model="model3" style="width:120px;height: 32px;">
-                                    <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                                </Select>
+                                <span style="line-height: 32px;">包邮</span>
                             </div>
                         </div>
                         <div class="num">
@@ -79,18 +78,16 @@
                             </div>
                         </div>
                         <div class="num">
-                            <div class="label">收货时间：</div>
+                            <div class="label">发货时间：</div>
                             <div class="item">
-                                <Select v-model="model4" style="width:120px;height: 32px;">
-                                    <Option v-for="item in cityList2" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                                </Select>
+                                <span class="delivery">24小时内发货</span>
                             </div>
                         </div>
                         <div class="operation">
                             <div class="label"></div>
                             <div class="item">
                                 <button class="buy">立即购买</button>
-                                <button class="join-car">加入购物车</button>
+                                <button class="join-car" @click="joincar">加入购物车</button>
                             </div>
                         </div>
                     </div>
@@ -212,29 +209,19 @@ export default {
                     label: "Canberra"
                 }
             ],
-            cityList2: [
-                {
-                    value: "收货时间不限",
-                    label: "收货时间不限"
-                },
-                {
-                    value: "周一至周五",
-                    label: "周一至周五"
-                },
-                {
-                    value: "周六日/节假日",
-                    label: "周六日/节假日"
-                }
-            ],
             model1: "",
-            model2: "",
-            model3: "",
-            model4: ""
+            model2: ""
         };
     },
     methods: {
         chosee_specs(index) {
             this.specs_index = index;
+        },
+        joincar() {
+            this.$Message.success({
+                content: "添加成功，请及时付款哦!",
+                duration: 1.5
+            });
         }
     }
 };
