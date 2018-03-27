@@ -9,18 +9,12 @@
                 <span>完成订单</span>
             </div>
             <div class="plan">
-                <div class="plan-all plan-first">
-                    <span>1</span>
-                </div>
-                <div class="plan-line"></div>
-                <div class="plan-all plan-second plancolor">
-                    <span>2</span>
-                </div>
-                <div class="plan-line line-second"></div>
-                <div class="plan-all plan-three">
-                    <span>3</span>
-                </div>
-            </div>
+                <Steps :current="current" class="plan-steps">
+                    <Step class="plan-first" style="width : 240px"></Step>
+                    <Step style="width : 236px"></Step>
+                    <Step style="width : 30px"></Step>
+                </Steps>
+            </div> 
         </div>
         <!-- 收货地址 -->
         <div class="goodsaddress">
@@ -28,7 +22,7 @@
                 <div class="addressshow" v-for="(item,index) in 4" :key="index">
                     <img src="../assets/img/addBorder_H.png">
                     <div class="addressconent">
-                        <p>坚哥</p>
+                        <p class="p">坚哥</p>
                         <p class="tower">浙江省杭州市滨江区滨安路650号IX-work大厦12楼301室</p>
                         <p class="tower">15558038093</p>
                     </div>
@@ -94,7 +88,7 @@
             <div class="mer-total">
                 <div class="coding">
                     <span>推荐销售人员编码（选填）：</span>
-                    <input type="text" v-model="tjcode">
+                    <Input class="inputt"></Input>
                 </div>
                 <div class="mer-money">
                     <p>共<span>{{shopnum}}</span>件商品，总计（含运费） </p> <span class="fontbig">¥ {{ALLmoney}}</span>
@@ -105,13 +99,15 @@
     </div>
 </template>
 <script>
-import { Icon,Input } from "iview";
+import { Icon,Input,Steps,Step } from "iview";
 import Search from "../components/search.vue";
 import Modal from "../components/modal";
 export default {
     components: {
         Search,
         Input,
+        Steps,
+        Step,
         Icon,
         Modal   //删除弹框
     },
@@ -119,6 +115,7 @@ export default {
         return {
             qxmsg:"确认要删除该商品？",
             wicketcl:false, 
+            current:1,
             tjcode:null,       //推荐人输入的数字
             shopnum:0,         // 选择商品件数
             ALLmoney:0.00,     //结算的钱

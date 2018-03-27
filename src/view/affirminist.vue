@@ -11,17 +11,11 @@
                     <span>完成订单</span>
                 </div>
                 <div class="plan">
-                    <div class="plan-all plan-first plancolor">
-                        <span>1</span>
-                    </div>
-                    <div class="plan-line"></div>
-                    <div class="plan-all plan-second">
-                        <span>2</span>
-                    </div>
-                    <div class="plan-line line-second"></div>
-                    <div class="plan-all plan-three">
-                        <span>3</span>
-                    </div>
+                    <Steps :current="current" class="plan-steps">
+                        <Step class="plan-first" style="width : 240px"></Step>
+                        <Step style="width : 236px"></Step>
+                        <Step style="width : 30px"></Step>
+                    </Steps>
                 </div>
             </div>
             <!-- 订单提交成功 显示金额 -->
@@ -104,12 +98,14 @@
 <script>
 import Search from "../components/search"
 import Modal from "../components/modal"
-import {Icon} from "iview"
+import {Icon,Steps,Step} from "iview"
 export default {
     components: {
       Search,
       Modal,
-      Icon
+      Icon,
+      Steps,
+      Step
     },
     data () {
         return {
@@ -134,7 +130,8 @@ export default {
             bankdown:true,
             bankup:false,
             affirmimg:false,     //确认支付弹窗
-            qxmsg:"确定要取消支付吗？"
+            qxmsg:"确定要取消支付吗？",
+            current:2,      //进度条
             
         }
     },
