@@ -10,18 +10,12 @@
                     <span>完成订单</span>
                 </div>
                 <div class="plan">
-                    <div class="plan-all plan-first">
-                        <span>1</span>
-                    </div>
-                    <div class="plan-line"></div>
-                    <div class="plan-all plan-second">
-                        <span>2</span>
-                    </div>
-                    <div class="plan-line line-second"></div>
-                    <div class="plan-all plan-three plancolor">
-                        <span>3</span>
-                    </div>
-                </div>
+                    <Steps :current="current" class="plan-steps">
+                        <Step class="plan-first" style="width : 240px"></Step>
+                        <Step style="width : 236px"></Step>
+                        <Step style="width : 30px"></Step>
+                    </Steps>
+                </div> 
             </div>
             <!-- 支付成功内容 -->
             <div class="suconent">
@@ -47,13 +41,16 @@
 </template>
 <script>
 import Search from "../components/search"
+import { Steps , Step} from "iview"
 export default {
     components: {
-        Search
+        Search,
+        Steps,
+        Step
     },
     data () {
         return {
-            
+            current:1,   //进度条
         }
     }    
 }

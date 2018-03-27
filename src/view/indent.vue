@@ -24,21 +24,12 @@
                 </div>
                 <div class="state-body">
                     <div class="plan">
-                        <div class="plan-all plan-first plancolor">
-                            <span>1</span>
-                        </div>
-                        <div class="plan-line"></div>
-                        <div class="plan-all plan-second plancolor">
-                            <span>2</span>
-                        </div>
-                        <div class="plan-line line-second"></div>
-                        <div class="plan-all plan-three">
-                            <span>3</span>
-                        </div>
-                        <div class="plan-line line-three"></div>
-                        <div class="plan-all plan-three">
-                            <span>4</span>
-                        </div>
+                        <Steps :current="current" class="plan-steps">
+                            <Step class="plan-first" style="width : 240px"></Step>
+                            <Step style="width : 236px"></Step>
+                            <Step style="width : 236px"></Step>
+                            <Step style="width : 30px"></Step>
+                        </Steps>
                     </div>
                 </div>
                 <div class="state-foot">
@@ -160,15 +151,17 @@
 </template>
 <script>
 import Search from "../components/search"
-import { Icon } from "iview"
+import { Icon,Steps,Step } from "iview"
 export default {
     components: {
         Search,
-        Icon
+        Icon,
+        Steps,
+        Step
     },
     data () {
         return {
-            
+            current:2,
         }
     }
 }
