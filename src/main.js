@@ -13,6 +13,7 @@ import "iview/dist/styles/iview.css"; //iview样式
 import "./assets/public/selftheme.less"; //自定义主题
 import "./assets/public/reset.css"; //初始化默认样式
 
+Vue.use(iView);
 Vue.use(Vuerify);
 
 Vue.config.productionTip = false;
